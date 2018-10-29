@@ -1,0 +1,167 @@
+$(document).ready(function(){
+
+ 		$(".head-catalog-che").hide();
+ 		$(".xlcd").click(function(){
+ 			$(".head-catalog-che").toggle();
+ 			$(this).children().addClass("word");
+ 			$(this).siblings().children().removeClass("word");
+ 		});
+ 		$(".xlcda").click(function(){
+ 			$(this).children().addClass("word");
+ 			$(this).siblings().children().removeClass("word");
+ 			$(".head-catalog-che").hide();
+ 		});
+ 		// $(".donation-img-a").mousemove(function(){
+ 		// 	$("#donation-a").removeClass("donation-img-bg");
+ 		// 	$("#donation-a").addClass("donation-img-bg-move");
+ 		// 	$("#donation-b").removeClass("donation-img-text");
+ 		// 	$("#donation-b").addClass("donation-img-text-move");
+ 		// })
+ 		// $(".donation-img-a").mouseout(function(){
+ 		// 	$("#donation-a").removeClass("donation-img-bg-move");
+ 		// 	$("#donation-a").addClass("donation-img-bg");
+ 		// 	$("#donation-b").removeClass("donation-img-text-move");
+ 		// 	$("#donation-b").addClass("donation-img-text");
+ 		// })
+
+ 		$('.plaza-classify-img-icon').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.plaza-classify-img-icon').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.plaza-recommend-img').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.plaza-recommend-img').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.plaza-detailed-img').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.plaza-detailed-img').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.future-img').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.future-img').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.future-img-l').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.future-img-l').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.auction-text-a-img').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.auction-text-a-img').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('.donation-ximg').mouseenter(function(){
+				$(this).addClass('donation-size');
+			});
+		$('.donation-ximg').mouseleave(function(){
+				$(this).removeClass('donation-size');
+			});
+		$('.new-text-img-b').mouseenter(function(){
+				$(this).addClass('nwe-size');
+			});
+		$('.new-text-img-b').mouseleave(function(){
+				$(this).removeClass('nwe-size');
+			});
+		$('.donation-img-a').mouseenter(function(){
+				$(this).addClass('donation-s-size');
+			});
+		$('.donation-img-a').mouseleave(function(){
+				$(this).removeClass('donation-s-size');
+			});
+		$('.exercise-special-img-a').mouseenter(function(){
+				$(this).children('img').addClass('scales');
+			});
+		$('.exercise-special-img-a').mouseleave(function(){
+				$(this).children('img').removeClass('scales');
+			});
+		$('#but').click(function(){
+			$("#but").addClass("plaza-radio-b");
+			$("#but").removeClass("plaza-radio-a");
+			$("#text").addClass("plaza-recommend-b");
+			$("#text").removeClass("plaza-recommend-a");
+			$("#but1").addClass("plaza-radio-a");
+			$("#but1").removeClass("plaza-radio-b");
+			$("#text1").addClass("plaza-recommend-a");
+			$("#text1").removeClass("plaza-recommend-b");
+		});
+		$('#text').click(function(){
+			$("#but").addClass("plaza-radio-b");
+			$("#but").removeClass("plaza-radio-a");
+			$("#text").addClass("plaza-recommend-b");
+			$("#text").removeClass("plaza-recommend-a");
+			$("#but1").addClass("plaza-radio-a");
+			$("#but1").removeClass("plaza-radio-b");
+			$("#text1").addClass("plaza-recommend-a");
+			$("#text1").removeClass("plaza-recommend-b");
+		});
+		$('#but1').click(function(){
+			$("#but").addClass("plaza-radio-a");
+			$("#but").removeClass("plaza-radio-b");
+			$("#text").addClass("plaza-recommend-a");
+			$("#text").removeClass("plaza-recommend-b");
+			$("#but1").addClass("plaza-radio-b");
+			$("#but1").removeClass("plaza-radio-a");
+			$("#text1").addClass("plaza-recommend-b");
+			$("#text1").removeClass("plaza-recommend-a");
+		});
+		$('#text1').click(function(){
+			$("#but").addClass("plaza-radio-a");
+			$("#but").removeClass("plaza-radio-b");
+			$("#text").addClass("plaza-recommend-a");
+			$("#text").removeClass("plaza-recommend-b");
+			$("#but1").addClass("plaza-radio-b");
+			$("#but1").removeClass("plaza-radio-a");
+			$("#text1").addClass("plaza-recommend-b");
+			$("#text1").removeClass("plaza-recommend-a");
+		});
+		$('#but2').click(function(){
+			$("#but2").addClass("plaza-radio-b");
+			$("#but2").removeClass("plaza-radio-a");
+			$("#text2").addClass("plaza-recommend-b");
+			$("#text2").removeClass("plaza-recommend-a");
+			$("#but3").addClass("plaza-radio-a");
+			$("#but3").removeClass("plaza-radio-b");
+			$("#text3").addClass("plaza-recommend-a");
+			$("#text3").removeClass("plaza-recommend-b");
+		});
+		$('#text2').click(function(){
+			$("#but2").addClass("plaza-radio-b");
+			$("#but2").removeClass("plaza-radio-a");
+			$("#text2").addClass("plaza-recommend-b");
+			$("#text2").removeClass("plaza-recommend-a");
+			$("#but3").addClass("plaza-radio-a");
+			$("#but3").removeClass("plaza-radio-b");
+			$("#text3").addClass("plaza-recommend-a");
+			$("#text3").removeClass("plaza-recommend-b");
+		});
+		$('#but3').click(function(){
+			$("#but2").addClass("plaza-radio-a");
+			$("#but2").removeClass("plaza-radio-b");
+			$("#text2").addClass("plaza-recommend-a");
+			$("#text2").removeClass("plaza-recommend-b");
+			$("#but3").addClass("plaza-radio-b");
+			$("#but3").removeClass("plaza-radio-a");
+			$("#text3").addClass("plaza-recommend-b");
+			$("#text3").removeClass("plaza-recommend-a");
+		});
+		$('#text3').click(function(){
+			$("#but2").addClass("plaza-radio-a");
+			$("#but2").removeClass("plaza-radio-b");
+			$("#text2").addClass("plaza-recommend-a");
+			$("#text2").removeClass("plaza-recommend-b");
+			$("#but3").addClass("plaza-radio-b");
+			$("#but3").removeClass("plaza-radio-a");
+			$("#text3").addClass("plaza-recommend-b");
+			$("#text3").removeClass("plaza-recommend-a");
+		});
+	});
