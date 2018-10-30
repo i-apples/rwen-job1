@@ -107,6 +107,14 @@ body{
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
 }
+.img-box{
+  img{
+    .donghua-06s;
+  }
+}
+.donghua-img-big:hover{
+  transform:scale(1.5);
+}
 //.f20{
 //    .font;
 //    font-size: 14px;
@@ -176,7 +184,9 @@ body{
 .btn-more:hover{
   background-color: darkred;
 }
-
+.img-box{
+  overflow: hidden;
+}
 
 //mainColor
 @mainColor:#e40209;
@@ -485,10 +495,7 @@ section{
 
 
   .con_2{
-    background: -webkit-linear-gradient(#D9D5E3, #fff); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#D9D5E3, #fff); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#D9D5E3, #fff); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#D9D5E3, #fff); /* 标准的语法 */
+    background-image: url("../img/con2_background.jpg");
     //height: 850px;
     padding-bottom: 30px;
     .btn_list{
@@ -497,10 +504,30 @@ section{
       .btn_link{
         display: inline-block;
         width: max-content;
+        cursor: pointer;
         .p{
           text-align: center;
           .f24;
           color: #000;
+          padding-top: 17px;
+        }
+        .img1,.img2,.img3,.img4{
+          width: 131px;
+          height: 131px;
+          background-image: url("../img/imgs-1.png");
+          background-repeat: no-repeat;
+        }
+        .img1{
+          background-position-x: -113px;
+        }
+        .img2{
+          background-position-x: -113-319px;
+        }
+        .img3{
+          background-position-x: -113-319*2px;
+        }
+        .img4{
+          background-position-x: -113-319*3px;
         }
       }
     }
@@ -508,6 +535,7 @@ section{
       width: 565px;
       padding: 5px;
       border: 1px solid #d6d8d9;
+      background: white;
       .f_l;
       .big-img{
         position: relative;
@@ -522,7 +550,7 @@ section{
       }
       .btn-img-list{
         text-align-last: justify;
-        padding-top: 2px;
+        padding-top: 5px;
         .img-box{
           position: relative;
           display: inline-block;
@@ -555,6 +583,7 @@ section{
         .f18;
         color: #333333;
         background-color: #fff;
+        padding-bottom: 30px;
         .ul{
           height: 430px;
           padding: 20px;
@@ -581,6 +610,7 @@ section{
         }
         .btn-box{
           text-align: right;
+          padding-right: 20px;
         }
       }
     }
@@ -627,6 +657,7 @@ section{
             height: 448px;
             background-size: 100% 100%;
             background-repeat: no-repeat;
+            overflow: hidden;
             .img-title{
               position: absolute;
               bottom: 0;
@@ -709,9 +740,9 @@ section{
     }
   }
   .con_5,.con_6{
+    background-color: #f6f6f6;
     .icon-box{
       padding-top: 50px;
-      background-color: #f6f6f6;
       img{
         width: 260px;
       }
@@ -730,11 +761,13 @@ section{
         vertical-align: top;
         max-height: 610px;
         overflow: hidden;
+        background-color: #fff;
         //测试代码
         //border: 1px solid black;
       }
       .left{
         width: @left;
+        padding-top: 5px;
         .option{
           width: max-content;
           padding: 15px 30px;
@@ -752,7 +785,7 @@ section{
             .link{
               .f14;
               color: #000;
-              line-height: 34px;
+              line-height: 26px;
             }
           }
         }
@@ -769,6 +802,7 @@ section{
         .link-list{
           .nav{
             padding-left: 20px;
+            border-bottom: 2px solid #f6f6f6;
             .btn_link {
               line-height: 65px;
               margin-right: 15px;
@@ -825,14 +859,17 @@ section{
         width: @right;
         padding-top: 65px;
         .link-list{
-          position: absolute;
-          bottom: 0;
+          //position: absolute;
+          //bottom: 0;
           .ul_0{
             .li_0{
               position: relative;
               width: 165px;
               height: 225px;
               margin: 10px 15px;
+              margin-bottom: 52px;
+              top: 0;
+              .donghua-03s;
               .f_l;
               .title{
                 .f14;
@@ -865,6 +902,9 @@ section{
                 width: 100%;
               }
             }
+            .li_0:hover{
+              top: -5px;
+            }
           }
         }
       }
@@ -894,6 +934,7 @@ section{
   }
   .con_7{
     padding: 40px 0 170px 0;
+    background-color: #f6f6f6;
     .content{
       border-bottom: 1px solid #878787;
       text-align-last: justify;
@@ -942,7 +983,12 @@ section{
     }
   }
   .con_8{
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+    background-color: #f6f6f6;
+    .content{
+      background-color: #fff;
+      padding: 25px 30px;
+    }
     .icon-box{
       .btn-link{
         width: 250px;
@@ -960,13 +1006,18 @@ section{
     }
   }
   .con_9{
+    margin-top: 55px;
+    background-color: #f6f6f6;
     .content{
       text-align-last: justify;
+      .p_0;
     }
     .btn-link{
       position: relative;
       display: inline-block;
+      top: 0;
       width: 315px;
+      .donghua-03s;
       .img-box{
         width: 315px;
         height: 195px;
@@ -989,5 +1040,121 @@ section{
         text-align-last: center;
       }
     }
+    .btn-link:hover{
+      top: -5px;
+    }
+  }
+}
+footer{
+  color: #757575;
+  a{
+    color: #757575;
+  }
+  .tail{
+    width: 100%;
+    height: 310px;
+    background: #f6f6f6;
+    float: left;
+
+  }
+  .tail-serve{
+    width: 100%;
+    height: 230px;
+    background: #fff;
+  }
+  .tail-serve-tal{
+    width: 323px;
+    height: 132px;
+    border-radius: 10px;
+    background: #f6f6f6;
+    float: left;
+    margin: 50px 0 0 0;
+  }
+  .tal-text{
+    font-size: 18px;
+    font-family: "微软雅黑";
+    float: left;
+    margin: 13px 0 0 17px;
+  }
+  .tal-tal{
+    font-size: 30px;
+    font-family: "微软雅黑";
+    color: @mainColor;
+    float: left;
+    margin: 0 0 0 17px;
+  }
+  .customer-tal{
+    width: 104px;
+    height: 32px;
+    background: @mainColor;
+    float: right;
+    margin: 3px 58px 0 0;
+    border-radius: 4px;
+  }
+  .customer{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    margin: 5px 0 0 20px;
+  }
+  .guide{
+    width: 610px;
+    height: 183px;
+    float: left;
+    margin-left:131px;
+    margin-top: 30px;
+  }
+  .guide-bg{
+    float: left;
+    width: 115px;
+  }
+  .guide-text{
+    font-size: 14px;
+    font-family: "微软雅黑";
+    font-weight:bold;
+    padding-bottom:4px; ;
+  }
+  .guide-li{
+    padding: 3px 0;
+    font-family: "微软雅黑";
+    font-size: 12px;
+  }
+  .sys{
+    width: 120px;
+    height: 113px;
+    float: left;
+    margin-top: 30px;
+  }
+  .sys-img{
+    width: 95px;
+    height: 95px;
+    float: left;
+    margin-left:10px;
+  }
+  .sys-text{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    float: left;
+  }
+  .ba{
+    text-align: center;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    margin-top: 30px;
+  }
+  .food-ba{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+
+  }
+  /*网页尾部的结束*/
+  .scales {
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
   }
 }
