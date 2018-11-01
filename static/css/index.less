@@ -220,7 +220,8 @@ header{
       margin-right: 40px;
     }
     .btn_login:hover,.btn_register:hover{
-      background-color: #030a99;
+      background-color: #fff;
+      color: @mainColor;
     }
     .btn_register{
       margin-right: -15px;
@@ -454,8 +455,14 @@ section{
           transform: translate3d(0,0px,0);
         }
       }
+      .bak{
+        height: 682px;
+        width: 100%;
+      }
       .img-fo{
-        top: 27%;
+        //top: 27%;
+        //left: 35%;
+        top: 35%;
         left: 35%;
         animation:container 10s linear infinite;; /*动画的名称*/
         transform-origin: center bottom; /*设置动画旋转元素的基点为：居中靠下*/
@@ -519,7 +526,7 @@ section{
         top: -38%;
         width: 60%;
         transition: 0.5s;
-        transform-origin: 50%;
+        transform-origin: 50% 50%;
       }
     }
   }
@@ -693,10 +700,15 @@ section{
         .ul{
           height: 430px;
           padding: 20px;
+          overflow: auto;
           .list-row{
             text-align-last: justify;
             padding: 10px 0 25px 0;
             border-bottom: 1px dashed #8d8686;
+            .donghua-03s;
+          }
+          .list-row:hover{
+            background-color: rgba(213,213,213,1);
           }
           span{
             display: inline-block;
@@ -797,8 +809,9 @@ section{
             position: relative;
             top: 0;
             border-bottom: 1px solid #e5e5e5;
-            padding: 15px 0 5px 0;
-            .donghua-03s;
+            padding: 15px 10px 5px 10px;
+            background: rgba(255,255,255,1);
+            .donghua-06s;
             .words{
               .f14;
               color: #2b2b2b;
@@ -809,9 +822,10 @@ section{
             padding-top: 0;
           }
           .list-row:hover{
-            top: -10px;
+            //top: -10px;
+            background: rgba(66,66,66,.5);
             .words{
-              color: #3d3793;
+              color: #fff;
             }
           }
         }
@@ -966,10 +980,14 @@ section{
             border-radius: 15px;
             .donghua-03s;
           }
-          .hover{
-            background: @mainColor;
-            color: #fff;
+          .btn-link:hover{
+              background: @mainColor;
+              color: #fff;
           }
+          //.hover{
+          //  background: @mainColor;
+          //  color: #fff;
+          //}
           //.btn-link:hover{
           //  background: @mainColor;
           //  color: #fff;
@@ -1004,10 +1022,15 @@ section{
                 margin: 10px 0;
                 .btn-link{
                   line-height: 15px;
+                  padding: 3px 10px;
                   .f12;
                   color: @mainColor;
                   border-radius: 15px;
                   .donghua-03s;
+                }
+                .btn-link:hover{
+                  background: @mainColor;
+                  color: #fff;
                 }
                 .btn-link:last-child{
                   padding-top: 3px;
@@ -1047,6 +1070,10 @@ section{
       color: #fff;
       cursor: pointer;
     }
+    //.img-box:after:hover{
+    //  background: @mainColor;
+    //  color: #000;
+    //}
     .left{
       .img-box:after{
         content: none;

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://m.lpn.dnsrw.com/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>RWcms网站管理系统 - 人文在线</title>
+    <meta name="keywords" content="人文在线RWCMS系统,ASP.NET开源,开源CMS,网站管理系统,互联网开发">
+    <meta name="description" content="让更多的人分享互联网开发技术">
+    <link rel="stylesheet" type="text/css" href="static/wap_js_css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="static/wap_js_css/style1.css">
+
+    <link rel="stylesheet" href="static/Plugins/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="static/wap_js_css/icon/font/iconfont.css">
+
+    <script type="text/javascript" charset="utf-8" src="static/wap_js_css/zepto.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="static/wap_js_css/weui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="static/wap_js_css/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="static/wap_js_css/idangerous.swiper-2.1.min.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //初始化幻灯片
+            var mySwiper = new Swiper('.swiper-container', {
+                calculateHeight: true,
+                resizeReInit: true,
+                pagination: ".pagination",
+                autoplay: 5000,
+                paginationClickable: true
+            });
+            //选中Tab
+            $(".weui-tabbar a").eq(0).addClass("weui-bar__item_on");
+        });
+    </script>
+</head>
+
+<body ontouchstart="">
+<div class="page">
+    <!--页面头部-->
+    <div class="header">
+        <div class="logo">
+            <a href="http://m.lpn.dnsrw.com/index.aspx">
+                <img src="static/img/wap/logo.png">
+            </a>
+        </div>
+        <div class="right">
+            <a href="http://m.lpn.dnsrw.com/usercenter.aspx?action=index">
+                <i class="iconfont icon-user"></i>
+            </a>
+        </div>
+    </div>
+    <!--/页面头部-->
+
+    <!--页面内容-->
+    <div class="page__bd">
+        <!--首页幻灯片-->
+        <div id="slider" class="swiper-container">
+            <div class="swiper-wrapper"
+                 style="width: 1080px; transform: translate3d(0px, 0px, 0px); transition-duration: 0s; height: 245px;">
+                <div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 360px; height: 245px;">
+                    <img src="static/img/wap/banner1.jpg"></div>
+                <div class="swiper-slide" style="width: 360px; height: 245px;"><img
+                        src="static/img/wap/banner2.jpg"></div>
+                <div class="swiper-slide" style="width: 360px; height: 245px;"><img
+                        src="static/img/wap/banner3.jpg"></div>
+            </div>
+            <div class="pagination"><span
+                    class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span
+                    class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span></div>
+        </div>
+        <!--/首页幻灯片-->
+
+        <div class="list-news">
+            <div class="c1">
+                <span class="tit">
+                    历史善款总额:
+                </span>
+                <span class="sum-money span">
+                    56546622.22元
+                </span>
+            </div>
+            <div class="c2">
+                <span class="tit">
+                    历史爱心总人次:
+                </span>
+                <span class="sum-people span">
+                    56546622人
+                </span>
+            </div>
+        </div>
+
+        <!--首页图标导航-->
+        <div class="weui-grids nav-list">
+            <a href="http://m.lpn.dnsrw.com/news.aspx" class="weui-grid">
+                <div class="imgs-1 img1"></div>
+                <p class="weui-grid__label">新闻资讯</p>
+            </a>
+            <a href="http://m.lpn.dnsrw.com/news.aspx" class="weui-grid">
+                <div class="imgs-1 img2"></div>
+                <p class="weui-grid__label">项目计划</p>
+            </a>
+            <a href="http://m.lpn.dnsrw.com/news.aspx" class="weui-grid">
+                <div class="imgs-1 img3"></div>
+                <p class="weui-grid__label">佛器商城</p>
+            </a>
+            <a href="http://m.lpn.dnsrw.com/news.aspx" class="weui-grid">
+                <div class="imgs-1 img4"></div>
+                <p class="weui-grid__label">佛器义拍</p>
+            </a>
+        </div>
+        <!--/首页图标导航-->
+
+        <a class="con_1">
+            <img src="static/img/wap/img1.jpg" alt="">
+        </a>
+
+        <!--新闻资讯-->
+        <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__hd">
+                <span class="sp1">
+                    项目计划
+                </span>
+                <span class="sp2">
+                    Project Plan
+                </span>
+            </div>
+            <div class="weui-panel__bd">
+                <div class="txt-list">
+                    <ul>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <span class="time">
+                                    2018-8-8
+                                </span>
+                                <p class="intro">
+                                    计划的内容计划的内容计划的内容计划的内容计划的内容计划的内容</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <span class="time">
+                                    2018-8-8
+                                </span>
+                                <p class="intro">
+                                    计划的内容计划的内容计划的内容计划的内容计划的内容计划的内容</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <span class="time">
+                                    2018-8-8
+                                </span>
+                                <p class="intro">
+                                    计划的内容计划的内容计划的内容计划的内容计划的内容计划的内容</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="view-more">
+                <span class="sp1">
+                    查看更多
+                </span>
+                <i class="fa fa-chevron-right">
+
+                </i>
+            </a>
+        </div>
+        <!--新闻资讯-->
+
+        <!--最新法讯-->
+        <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__hd">
+                <span class="sp1">
+                    最新法讯
+                </span>
+                <span class="sp2">
+                    Latest News
+                </span>
+            </div>
+            <div class="weui-panel__bd">
+                <div class="txt-list">
+                    <ul>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <p class="intro m-t9">
+                                    藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地
+                                </p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <p class="intro m-t9">
+                                    藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地
+                                </p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="http://m.lpn.dnsrw.com/news_show.aspx?id=36">
+                                <img src="static/img/wap/201504171107187253.jpg">
+                                <h2>童星筑梦未来计划</h2>
+                                <p class="intro m-t9">
+                                    藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地建設慈善基金總會藍毗尼佛陀聖地
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="view-more">
+                <span class="sp1">
+                    查看更多
+                </span>
+                <i class="fa fa-chevron-right">
+
+                </i>
+            </a>
+        </div>
+        <!--/最新法讯-->
+
+        <!--活动专题-->
+        <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__hd">
+                <span class="sp1">
+                    活动专题
+                </span>
+                <span class="sp2">
+                    Activity topic
+                </span>
+            </div>
+
+            <div class="news-content">
+                <div class="title_time">
+                    <span class="sp1">
+                        信徒们的虔诚朝圣和16世纪之前的古藏遗风
+                    </span>
+                    <span class="sp2">
+                        2018-10-26
+                    </span>
+                </div>
+                <p class="word-Article">
+                    国际中国公益事业大典在2014年由中国世纪大采风 CCTV《智慧中国》栏目组联合首都及全国百余家媒体响应国家号召联合发起，旨在为更多的公益组织与地方机构建立合作推广桥梁，并联合媒体及企业力量资源整合，共同为中国公益事业集思广益，出谋划策，落地实施，助力推进。
+                </p>
+                <img src="static/img/wap/img2.jpg" alt="none" class="title-img">
+            </div>
+            <a href="#" class="view-more">
+                <span class="sp1">
+                    查看更多
+                </span>
+                <i class="fa fa-chevron-right">
+
+                </i>
+            </a>
+        </div>
+        <!--/活动专题-->
+
+        <!--商城-->
+        <div class="shop">
+            <div class="con_1">
+                <div class="nav-title">
+                    <span class="span">
+                        佛器商城
+                    </span>
+                </div>
+                <div class="btn-list">
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-gouwu1">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-gouwu1">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-gouwu1">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-gouwu1">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="con_2">
+                <div class="nav-title">
+                    <span class="span">
+                        佛器商城
+                    </span>
+                </div>
+                <div class="btn-list">
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list-row">
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <img src="static/img/wap/img3.png" alt="">
+                            <p class="name">
+                                商品名
+                            </p>
+                            <p class="num">
+                                <span class="sp1">
+                                    出价人数：
+                                </span>
+                                <span class="sp2">
+                                    5
+                                </span>
+                            </p>
+                            <p class="time">
+                                <span class="sp1">
+                                    时间截止
+                                </span>
+                                <span class="sp2">
+                                    3天6小时5分钟
+                                    <script>
+
+                                    </script>
+                                </span>
+                            </p>
+                            <div class="lab">
+                                    <span class="sp1">
+                                        价格:
+                                    </span>
+                                <span class="sp2">
+                                        ￥550元
+                                    </span>
+                                <i class="iconfont icon-yanpanchuizi fa-zhuizi">
+
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-over">
+                已经到底了........
+            </div>
+        </div>
+        <!--/商城-->
+
+
+        <!--底部导航-->
+        <div class="weui-tab foot-nav">
+            <div class="weui-tab__panel">
+
+            </div>
+            <div class="weui-tabbar">
+                <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on on">
+                    <div class="img-box">
+                        <img src="static/img/wap/icon1.png" data-src="static/img/wap/icon1a.png" class="icon" ></img>
+                    </div>
+                    <p class="weui-tabbar__label">首页</p>
+                </a>
+                <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
+                    <div class="img-box">
+                        <img src="static/img/wap/icon2.png" data-src="static/img/wap/icon1a.png" class="icon" ></img>
+                    </div>
+                    <p class="weui-tabbar__label">项目</p>
+                </a>
+                <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
+                    <div class="img-box">
+                        <img src="static/img/wap/icon3.png" data-src="static/img/wap/icon2a.png" class="icon" ></img>
+                    </div>
+                    <p class="weui-tabbar__label">赞助</p>
+                </a>
+                <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
+                    <div class="img-box">
+                        <img src="static/img/wap/icon4.png" data-src="static/img/wap/icon3a.png" class="icon" ></img>
+                    </div>
+                    <p class="weui-tabbar__label">认捐</p>
+                </a>
+                <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
+                    <div class="img-box">
+                        <img src="static/img/wap/icon1.png" data-src="static/img/wap/imgs-3.png" class="icon" ></img>
+                    </div>
+                    <p class="weui-tabbar__label">我的</p>
+                </a>
+            </div>
+        </div>
+        <!--/底部导航-->
+    </div>
+    <!--/页面内容-->
+</div>
+<script>
+    if($('.weui-tabbar a').hasClass('on')){
+        var $obj = $('.weui-tabbar .on').find('.icon');
+        var src = $obj.attr('src');
+        var data_src = $obj.attr('data-src');
+        var temp = src;
+        $obj.attr('src',data_src);
+        $obj.attr('data_src',src);
+        $('.weui-tabbar .on .weui-tabbar__label').css({
+            'color':'#de0607'
+        })
+    }
+</script>
+</body>
+</html>
