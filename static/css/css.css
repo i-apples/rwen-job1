@@ -13,7 +13,7 @@ a{
 float: left;
 width: 100%;
 height: 1080px;
-background-image:url('../images/png_01.jpg');
+background-image:url('../img/png_01.jpg');
 background-position: center;
 background-repeat: no-repeat;
 
@@ -26,7 +26,7 @@ background-repeat: no-repeat;
 	margin: 0 auto;	
 	width: 288px;
 	height: 181px;
-	background-image:url('../images/logo.png');
+	background-image:url('../images1/logo.png');
 }
 .head-catalog{
 	width: 100%;
@@ -240,7 +240,7 @@ background-repeat: no-repeat;
 	height: 19px;
 	float: left;
 	margin: 7px 0 0 14px;
-	background-image: url(../images/jit_03.jpg);
+	background-image: url(../img/jit_03.jpg);
 }
 .guocheng-click-a{
 	float: left;
@@ -265,7 +265,7 @@ background-repeat: no-repeat;
 	height: 19px;
 	float: left;
 	margin: 7px 0 0 14px;
-	background-image: url(../images/jt_06.jpg);
+	background-image: url(../img/jt_06.jpg);
 }
 /*图标导航*/
 .img-icon{
@@ -320,7 +320,7 @@ background-repeat: no-repeat;
 	width: 554px;
 	height: 367px;
 	margin: 3px 0 0 3px;
-	background-image:url(../images/png_20.jpg);
+	background-image:url(../img/png_20.jpg);
 }
 .donation-s-size{
 background-size: 590px 386px;
@@ -353,7 +353,7 @@ background-position:center center;
 	width: 180px;
 	height: 180px;
 	float: left;
-	background-image: url(../images/png_23.jpg);
+	background-image: url(../img/png_23.jpg);
 	margin-right:6px; 
 }
 .donation-size{
@@ -449,7 +449,7 @@ background-position:center center;
 	float: left;
 	width: 100%;
 	height: 1080px;
-	background-image: url(../images/lbn_02.jpg);
+	background-image: url(../img/lbn_02.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -499,7 +499,7 @@ background-position:center center;
 .new-text-img-b{
 	width: 521px;
 	height: 448px;
-	background-image: url(../images/lbn_003.png);
+	background-image: url(../img/lbn_003.png);
 	float: right;
 	margin: 12px 10px 0 0 ;
 }
