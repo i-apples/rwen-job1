@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <!--ie8兼容-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <!--ie8兼容&#45;&#45;结束-->
     <title>拍卖页面</title>
     <link rel="stylesheet" href="static/Plugins/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="static/wap_js_css/icon/font/iconfont.css">
+    <link rel="stylesheet" href="static/css/font/iconfont.css">
     <link rel="stylesheet" href="static/Plugins/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="static/Plugins/animate/animate.css">
     <link rel="stylesheet" href="static/Plugins/Swiper3/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="static/Plugins/ResetCss/reset.css">
+    <link rel="stylesheet" href="static/Plugins/bootstarp-datetimepicker/bootstrap-datetimepicker.min.css">
+
     <!--me-->
     <link rel="stylesheet" href="static/css/index.css">
 
 
     <!--[if lt IE 8]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="static/Plugins/ie8/response.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="static/Plugins/ie8/response.js"></script>
     <![endif]-->
     <!--
         新特性
@@ -60,13 +63,13 @@
                     //                         ·getTime　　　　　　｜　获取UTC(世界时间)格式的从1970.1.1 0:00以来的毫秒数
                     var temp = new Date();
                     var year = temp.getFullYear()
-                    var month = temp.getMonth()+1;
+                    var month = temp.getMonth() + 1;
                     var date = temp.getDate();
                     var day = temp.getDay();
-                    var days = ['一','二','三','四','五','六','末']
+                    var days = ['一', '二', '三', '四', '五', '六', '末']
                     var this_time = "今天是：" + year +
                         "年" + month + "月" + date + "日" +
-                        "星期" + days[day-1];
+                        "星期" + days[day - 1];
                     document.write(this_time)
                 </script>
             </a>
@@ -314,7 +317,7 @@
                 <div class="price">
                     <div class="title">
                         <h1>
-                            商品分类
+                            价格区间
                         </h1>
                         <i class="icon-sanjiao">
 
@@ -322,39 +325,39 @@
                     </div>
                     <div class="checkbox-list">
                         <div class="list-row clearfix">
-                            <a href="#" class="btn-link long f_l">
+                            <a href="#" class="btn-link long">
                                 <i class="checkbox">
 
                                 </i>
                                 <span class="span">
-                                嘎乌
-                            </span>
+                                    0-1W
+                                </span>
                             </a>
-                            <a href="#" class="btn-link f_r">
+                            <a href="#" class="btn-link">
                                 <i class="checkbox">
 
                                 </i>
                                 <span class="span">
-                                嘎乌
-                            </span>
+                                    0-2W
+                                </span>
                             </a>
                         </div>
                         <div class="list-row clearfix">
-                            <a href="#" class="btn-link f_l">
+                            <a href="#" class="btn-link">
                                 <i class="checkbox">
 
                                 </i>
                                 <span class="span">
-                                嘎乌
-                            </span>
+                                    0-3W
+                                </span>
                             </a>
-                            <a href="#" class="btn-link f_r">
+                            <a href="#" class="btn-link">
                                 <i class="checkbox">
 
                                 </i>
                                 <span class="span">
-                                嘎乌
-                            </span>
+                                    0-4W
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -362,55 +365,986 @@
                 <div class="time">
                     <div class="title">
                         <h1>
-                            商品分类
+                            起拍时间
                         </h1>
                         <i class="icon-sanjiao">
 
                         </i>
                     </div>
-                    <div class="checkbox-list">
-                        <div class="list-row clearfix">
-                            <a href="#" class="btn-link long f_l">
-                                <i class="checkbox">
-
-                                </i>
-                                <span class="span">
-                                嘎乌
-                            </span>
-                            </a>
-                            <a href="#" class="btn-link f_r">
-                                <i class="checkbox">
-
-                                </i>
-                                <span class="span">
-                                嘎乌
-                            </span>
-                            </a>
-                        </div>
-                        <div class="list-row clearfix">
-                            <a href="#" class="btn-link f_l">
-                                <i class="checkbox">
-
-                                </i>
-                                <span class="span">
-                                嘎乌
-                            </span>
-                            </a>
-                            <a href="#" class="btn-link f_r">
-                                <i class="checkbox">
-
-                                </i>
-                                <span class="span">
-                                嘎乌
-                            </span>
-                            </a>
-                        </div>
+                    <form class="form-dateTime clearfix" action="/url">
+                        <input class="input" size="16" type="text" id="str_time" readonly>
+                        <i class="to">To</i>
+                        <input class="input" size="16" type="text" id="end_time" readonly>
+                        <a href="" class="btn_link submit">确定</a>
+                    </form>
+                </div>
+                <div class="recommend">
+                    <div class="title">
+                        <h1>
+                            拍品推荐
+                        </h1>
+                    </div>
+                    <div class="link-list">
+                        <a href="" class="btn-link">
+                            <div class="img-box">
+                                <img src="static/img/img4.jpg" alt="">
+                            </div>
+                            <div class="word-list">
+                                <p class="p1">
+                                    新疆天然和田玉观音
+                                </p>
+                                <p class="p2">
+                                    <span>
+                                        当前价格：
+                                    </span>
+                                    <span class="b-red">
+                                        32元
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <div class="img-box">
+                                <img src="static/img/img4.jpg" alt="">
+                            </div>
+                            <div class="word-list">
+                                <p class="p1">
+                                    新疆天然和田玉观音
+                                </p>
+                                <p class="p2">
+                                    <span>
+                                        当前价格：
+                                    </span>
+                                    <span class="b-red">
+                                        32元
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                        <a href="" class="btn-link">
+                            <div class="img-box">
+                                <img src="static/img/img4.jpg" alt="">
+                            </div>
+                            <div class="word-list">
+                                <p class="p1">
+                                    新疆天然和田玉观音
+                                </p>
+                                <p class="p2">
+                                    <span>
+                                        当前价格：
+                                    </span>
+                                    <span class="b-red">
+                                        32元
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="market-panel">
-
+                <div class="top">
+                    <div class="title">
+                        您在搜索”佛像“找到1个条目
+                    </div>
+                    <div class="cons">
+                        筛选条件：
+                        <div class="word-list">
+                        <span class="span">
+                            转经筒
+                            <i class="fa fa-remove"></i>
+                        </span>
+                            <span class="span">
+                            摆件
+                            <i class="fa fa-remove"></i>
+                        </span>
+                        </div>
+                        <a href="" class="clearCons">
+                            清空所有筛选
+                        </a>
+                    </div>
+                    <div class="search-box">
+                        <input class="input" type="text" placeholder="搜索拍品">
+                        <i class="iconfont icon-magnifier"></i>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="list-row clearfix">
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box m-0-2">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-row clearfix">
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box m-0-2">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-row clearfix">
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box m-0-2">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <img src="static/img/img5.jpg" alt="">
+                            </div>
+                            <h2 class="title">
+                                莲花灯
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times">
+                                        <span class="hours">
+                                            12
+                                        </span>
+                                        时
+                                        <span class="minutes">
+                                            23
+                                        </span>
+                                        分
+                                        <span class="seconds">
+                                            2
+                                        </span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+                                        5人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        3人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        200元
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    234元
+                                </span>
+                                <a href="" class="btn-link">
+                                    参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="nav-page-list">
+                <label class="label"> 跳转： </label>
+                <input type="text" class="page-jump">
+                <a href="" class="btn-link str"> 首页 </a>
+                <a href="" class="btn-link prev"> 上一页 </a>
+                <a href="" class="btn-link"> 1 </a>
+                <a href="" class="btn-link"> 2 </a>
+                <a href="" class="btn-link"> 3 </a>
+                <span> ...... </span>
+                <a href="" class="btn-link"> 12 </a>
+                <a href="" class="btn-link next"> 下一页 </a>
+                <a href="" class="btn-link end"> 尾页 </a>
+            </div>
+            <div class="rec-historys">
+                <div class="big-title">
+                    最近浏览
+                </div>
+                <div class="list-row clearfix">
+                <div class="commodity-box">
+                    <div class="img-box">
+                        <img src="static/img/img5.jpg" alt="">
+                    </div>
+                    <h2 class="title">
+                        莲花灯
+                    </h2>
+                    <div class="words">
+                        <p class="p">
+                                <span class="sp_1">
+                                    拍卖预计结束时间
+                                </span>
+                            <span class="times">
+                                    <span class="hours">
+                                        12
+                                    </span>
+                                    时
+                                    <span class="minutes">
+                                        23
+                                    </span>
+                                    分
+                                    <span class="seconds">
+                                        2
+                                    </span>
+                                    秒
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    出价人数
+                                </span>
+                            <span class="sp_2">
+                                    5人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    围观人数
+                                </span>
+                            <span class="sp_2">
+                                    3人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    市场估价
+                                </span>
+                            <span class="sp_2">
+                                    200元
+                                </span>
+                        </p>
+                    </div>
+                    <div class="price">
+                        <i>￥</i>
+                        <span class="fa-30px">
+                                234元
+                            </span>
+                        <a href="" class="btn-link">
+                            参与竞拍
+                        </a>
+                    </div>
+                </div>
+                <div class="commodity-box">
+                    <div class="img-box">
+                        <img src="static/img/img5.jpg" alt="">
+                    </div>
+                    <h2 class="title">
+                        莲花灯
+                    </h2>
+                    <div class="words">
+                        <p class="p">
+                                <span class="sp_1">
+                                    拍卖预计结束时间
+                                </span>
+                            <span class="times">
+                                    <span class="hours">
+                                        12
+                                    </span>
+                                    时
+                                    <span class="minutes">
+                                        23
+                                    </span>
+                                    分
+                                    <span class="seconds">
+                                        2
+                                    </span>
+                                    秒
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    出价人数
+                                </span>
+                            <span class="sp_2">
+                                    5人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    围观人数
+                                </span>
+                            <span class="sp_2">
+                                    3人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    市场估价
+                                </span>
+                            <span class="sp_2">
+                                    200元
+                                </span>
+                        </p>
+                    </div>
+                    <div class="price">
+                        <i>￥</i>
+                        <span class="fa-30px">
+                                234元
+                            </span>
+                        <a href="" class="btn-link">
+                            参与竞拍
+                        </a>
+                    </div>
+                </div>
+                <div class="commodity-box">
+                    <div class="img-box">
+                        <img src="static/img/img5.jpg" alt="">
+                    </div>
+                    <h2 class="title">
+                        莲花灯
+                    </h2>
+                    <div class="words">
+                        <p class="p">
+                                <span class="sp_1">
+                                    拍卖预计结束时间
+                                </span>
+                            <span class="times">
+                                    <span class="hours">
+                                        12
+                                    </span>
+                                    时
+                                    <span class="minutes">
+                                        23
+                                    </span>
+                                    分
+                                    <span class="seconds">
+                                        2
+                                    </span>
+                                    秒
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    出价人数
+                                </span>
+                            <span class="sp_2">
+                                    5人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    围观人数
+                                </span>
+                            <span class="sp_2">
+                                    3人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    市场估价
+                                </span>
+                            <span class="sp_2">
+                                    200元
+                                </span>
+                        </p>
+                    </div>
+                    <div class="price">
+                        <i>￥</i>
+                        <span class="fa-30px">
+                                234元
+                            </span>
+                        <a href="" class="btn-link">
+                            参与竞拍
+                        </a>
+                    </div>
+                </div>
+                <div class="commodity-box m_0">
+                    <div class="img-box">
+                        <img src="static/img/img5.jpg" alt="">
+                    </div>
+                    <h2 class="title">
+                        莲花灯
+                    </h2>
+                    <div class="words">
+                        <p class="p">
+                                <span class="sp_1">
+                                    拍卖预计结束时间
+                                </span>
+                            <span class="times">
+                                    <span class="hours">
+                                        12
+                                    </span>
+                                    时
+                                    <span class="minutes">
+                                        23
+                                    </span>
+                                    分
+                                    <span class="seconds">
+                                        2
+                                    </span>
+                                    秒
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    出价人数
+                                </span>
+                            <span class="sp_2">
+                                    5人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    围观人数
+                                </span>
+                            <span class="sp_2">
+                                    3人
+                                </span>
+                        </p>
+                        <p class="p">
+                                <span class="sp_1">
+                                    市场估价
+                                </span>
+                            <span class="sp_2">
+                                    200元
+                                </span>
+                        </p>
+                    </div>
+                    <div class="price">
+                        <i>￥</i>
+                        <span class="fa-30px">
+                                234元
+                            </span>
+                        <a href="" class="btn-link">
+                            参与竞拍
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pay-process">
+            <a href="" class="box">
+                <div class="img-box">
+                    <img src="static/img/icon-listA1%20(1).png" alt="">
+                </div>
+                <p class="p">
+                    拍卖保障
+                </p>
+            </a>
+            <a href="" class="box">
+                <div class="img-box">
+                    <img src="static/img/icon-listA1%20(2).png" alt="">
+                </div>
+                <p class="p">
+                    支付帮助
+                </p>
+            </a>
+            <a href="" class="box">
+                <div class="img-box">
+                    <img src="static/img/icon-listA1%20(3).png" alt="">
+                </div>
+                <p class="p">
+                    机构支持
+                </p>
+            </a>
+            <a href="" class="box">
+                <div class="img-box">
+                    <img src="static/img/icon-listA1%20(4).png" alt="">
+                </div>
+                <p class="p">
+                    新手帮助
+                </p>
+            </a>
+            <a href="" class="box">
+                <div class="img-box">
+                    <img src="static/img/icon-listA1%20(5).png" alt="">
+                </div>
+                <p class="p">
+                    竞拍流程
+                </p>
+            </a>
         </div>
     </div>
     <div class="page_con_3">
@@ -435,53 +1369,109 @@
                 <div class="tail-serve-tal wow_no zoomInLeft">
                     <div class="tal-text">全国统一服务热线:</div>
                     <div class="tal-tal">86 88-88888888</div>
-                    <a href=""><div class="customer-tal"><div class="customer">在线客服</div></div></a>
+                    <a href="">
+                        <div class="customer-tal">
+                            <div class="customer">在线客服</div>
+                        </div>
+                    </a>
                 </div>
                 <div class="guide wow_no tada">
                     <div class="guide-bg">
-                        <a href="#"><div class="guide-text">立即行动</div></a>
+                        <a href="#">
+                            <div class="guide-text">立即行动</div>
+                        </a>
                         <div class="guide-ul">
-                            <a href="#"><div class="guide-li">立即捐款</div></a>
-                            <a href="#"><div class="guide-li">月捐计划</div></a>
-                            <a href="#"><div class="guide-li">如何从身边做起</div></a>
-                            <a href="#"><div class="guide-li">注册</div></a>
-                            <a href="#"><div class="guide-li">分享</div></a>
-                            <a href="#"><div class="guide-li">佛器商城</div></a>
-                            <a href="#"><div class="guide-li">佛器拍卖</div></a>
+                            <a href="#">
+                                <div class="guide-li">立即捐款</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">月捐计划</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">如何从身边做起</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">注册</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">分享</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">佛器商城</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">佛器拍卖</div>
+                            </a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#"><div class="guide-text">基金会简介</div></a>
+                        <a href="#">
+                            <div class="guide-text">基金会简介</div>
+                        </a>
                         <div class="guide-ul">
-                            <a href="#"><div class="guide-li">简介</div></a>
-                            <a href="#"><div class="guide-li">章程</div></a>
-                            <a href="#"><div class="guide-li">组织结构</div></a>
-                            <a href="#"><div class="guide-li">我们的团队</div></a>
-                            <a href="#"><div class="guide-li">联系我们</div></a>
+                            <a href="#">
+                                <div class="guide-li">简介</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">章程</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">组织结构</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">我们的团队</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">联系我们</div>
+                            </a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#"><div class="guide-text">新手指南</div></a>
+                        <a href="#">
+                            <div class="guide-text">新手指南</div>
+                        </a>
                         <div class="guide-ul">
-                            <a href="#"><div class="guide-li">常见问题</div></a>
-                            <a href="#"><div class="guide-li">帮助中心</div></a>
-                            <a href="#"><div class="guide-li">拍卖规则</div></a>
+                            <a href="#">
+                                <div class="guide-li">常见问题</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">帮助中心</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">拍卖规则</div>
+                            </a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#"><div class="guide-text">新闻资讯</div></a>
+                        <a href="#">
+                            <div class="guide-text">新闻资讯</div>
+                        </a>
                         <div class="guide-ul">
-                            <a href="#"><div class="guide-li">最新动态</div></a>
-                            <a href="#"><div class="guide-li">活动专题</div></a>
+                            <a href="#">
+                                <div class="guide-li">最新动态</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">活动专题</div>
+                            </a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#"><div class="guide-text">购物指南</div></a>
+                        <a href="#">
+                            <div class="guide-text">购物指南</div>
+                        </a>
                         <div class="guide-ul">
-                            <a href="#"><div class="guide-li">购物流程</div></a>
-                            <a href="#"><div class="guide-li">会员介绍</div></a>
-                            <a href="#"><div class="guide-li">常见问题</div></a>
-                            <a href="#"><div class="guide-li">联系客服</div></a>
+                            <a href="#">
+                                <div class="guide-li">购物流程</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">会员介绍</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">常见问题</div>
+                            </a>
+                            <a href="#">
+                                <div class="guide-li">联系客服</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -493,10 +1483,12 @@
         </div>
         <div style="width: 100%;height: auto;" class="wow_no bounce">
             <div class="food-ba">
-                <a href="#"><div class="ba">
-                    法律信息 隐私政策 谨防欺诈 常见问题解答!  沪公网安备 510106888888号
-                    <div>Copyright © 2014-2019 www.bdcf.org.hk All Rights Reserved </div>
-                </div></a>
+                <a href="#">
+                    <div class="ba">
+                        法律信息 隐私政策 谨防欺诈 常见问题解答! 沪公网安备 510106888888号
+                        <div>Copyright © 2014-2019 www.bdcf.org.hk All Rights Reserved</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -505,6 +1497,9 @@
 <script src="static/Plugins/Swiper3/swiper-3.4.2.jquery.min.js"></script>
 <script src="static/Plugins/animate/wow/wow.min.js"></script>
 <script src="static/Plugins/animate/wow/scrolla.jquery.min.js"></script>
+<script src="static/Plugins/bootstarp-datetimepicker/bootstrap.min.js"></script>
+<script src="static/Plugins/bootstarp-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script src="static/Plugins/bootstarp-datetimepicker/bootstrap-datetimepicker.fr.js"></script>
 <!--<script src="static/Plugins/scroll/jquery.mCustomScrollbar.concat.min.js"></script>-->
 
 <script>
@@ -513,9 +1508,9 @@
         $(this).removeClass('flipInX flipInY bounceInLeft bounceInRight').removeAttr('style');
         $(this).addClass('animated rubberBand');
         $(this).animate('.rubberBand');
-    },function () {
-        if ($(this).is('.rubberBand')){
-            $(this).animate('.rubberBand',function () {
+    }, function () {
+        if ($(this).is('.rubberBand')) {
+            $(this).animate('.rubberBand', function () {
                 $(this).stop();
                 $(this).removeClass('rubberBand');
             })
@@ -523,11 +1518,10 @@
     })
 
 
-
     $('.li_0').hover(function () {
         $(this).addClass('pulse infinite')
-    },function () {
-        $(this).animate('.pulse',function () {
+    }, function () {
+        $(this).animate('.pulse', function () {
             $(this).removeClass('pulse infinite')
         })
     })
@@ -536,14 +1530,62 @@
     //wowJs
     wow = new WOW(
         {
-            boxClass:     'wow',      // default
+            boxClass: 'wow',      // default
             animateClass: 'animated', // default
-            offset:       10,          // default
-            mobile:       true,       // default
-            live:         true        // default
+            offset: 10,          // default
+            mobile: true,       // default
+            live: true        // default
         }
     )
     wow.init();
+</script>
+<script>
+    $('#str_time,#end_time').datetimepicker({
+        language: 'zh',
+        minView: "month",
+        format: "dd/mm/yyyy",//日期格式
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 3,
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#str_time,#end_time').datetimepicker().on('changeDate', function () {
+
+    })
+</script>
+<script language="javascript" type="text/javascript">
+    function leftTimer(year, month, day, hour, minute, second) {
+        var leftTime = (new Date(year, month - 1, day, hour, minute, second)) - (new Date()); //计算剩余的毫秒数
+        var days = parseInt(leftTime / 1000 / 60 / 60 / 24, 10); //计算剩余的天数
+        var hours = parseInt(leftTime / 1000 / 60 / 60 % 24, 10); //计算剩余的小时
+        var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟
+        var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数
+        days = checkTime(days);
+        hours = checkTime(hours);
+        minutes = checkTime(minutes);
+        seconds = checkTime(seconds);
+        setInterval("leftTimer(2018,11,11,00,00,00)", 900);
+        // document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";
+        //
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("min").innerHTML = minutes;
+        document.getElementById("sec").innerHTML = seconds;
+    }
+
+    function checkTime(i) { //将0-9的数字前面加上0，例1变为01
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    window.onload = function () {
+        // leftTimer()
+    }
 </script>
 </body>
 </html>

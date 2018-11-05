@@ -1223,6 +1223,7 @@ section{
 }
 .page_auction{
   background-color: #f3f3f5;
+  @mainColor:#90181c;
   a{
     color: #010101;
     .donghua-03s;
@@ -1234,7 +1235,7 @@ section{
       display: block;
       width: 120px;
       .f16;
-      color: #90181c;
+      color: @mainColor;
       .f_l;
       .icon-gonggaoxiaolaba{
         font-size: 32px;
@@ -1264,13 +1265,81 @@ section{
       font-weight: bold;
     }
     .content{
-
+      padding-top: 35px;
+      .commodity-box{
+        position: relative;
+        width: 300px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        .f_l;
+        .img-box{
+          width: 100%;
+          height: 300px;
+          img{
+            .wh100;
+          }
+        }
+        .title,.words{
+          padding-left: 30px;
+        }
+        .title{
+          font-size: 24px;
+          color: #000;
+          line-height: 3;
+          border-top: 1px solid #f3f3f5;
+        }
+        .words{
+          color: #666666;
+          .f14;
+          p.p{
+            line-height: 32px;
+          }
+          .sp_1{
+            width: 135px;
+            display: inline-block;
+            .word_slh;
+            vertical-align: bottom;
+          }
+          .times{
+            color: #666;
+            padding-left: 15px;
+            span{
+              color: @mainColor;
+            }
+          }
+          .sp_2{
+            color: @mainColor;
+            padding-left: 15px;
+          }
+        }
+        .price{
+          color: @mainColor;
+          padding-bottom: 15px;
+          .f18;
+          padding-left: 30px;
+          .fa-30px{
+            font-size: 30px;
+          }
+          .btn-link{
+            position: absolute;
+            right: 18px;
+            bottom: 15px;
+            padding: 5px 15px;
+            background: @mainColor;
+            color: white;
+          }
+        }
+      }
+      .m-0-2{
+        margin: 0 20px;
+      }
     }
     .search-panel,.market-panel{
       .f_l;
     }
     .search-panel{
       width: 260px;
+      padding: 0 20px;
       .title{
         position: relative;
         h1{
@@ -1303,11 +1372,11 @@ section{
               display: inline-block;
               width: 15px;
               height: 15px;
-              border: 1px solid #90181c;
+              border: 1px solid @mainColor;
               margin: 0;
             }
             i.on{
-              background-color: #90181c;
+              background-color: @mainColor;
             }
             .span{
               margin-left: 10px;
@@ -1318,12 +1387,221 @@ section{
           }
         }
       }
-      .commodity,.price,.time{
-        padding: 0 20px;
+      .commodity,.price,.time,.recommend{
+        //padding: 0 20px;
+      }
+      .form-dateTime{
+        //height: 30px;
+        font-size: 0;
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 30px;
+        .to{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          vertical-align: bottom;
+          font-size: 22px;
+          text-align: center;
+          color: white;
+          background-color: @mainColor;
+        }
+        .input{
+          display: inline-block;
+          width: 43%;
+          height: 30px;
+          font-size: 14px;
+          color: #666666;
+          padding: 0 5px;
+        }
+        .btn_link{
+          font-size: 18px;
+          color: inherit;
+          display: inline-block;
+          padding: 3px 45px;
+          color: @mainColor;
+          border: 1px solid @mainColor;
+          margin-top: 35px;
+          .f_r;
+        }
+      }
+      .recommend{
+        .btn-link{
+          display: block;
+          margin: 28px 0;
+        }
+        .img-box{
+          .f_l;
+          width: 72px;
+          height: 72px;
+        }
+        .word-list{
+          position: relative;
+          height: 72px;
+          color: #2b2b2b;
+          .f14;
+          padding-left: 85px;
+          .p1{
+            line-height: 36px;
+            .word_slh;
+          }
+          .p2{
+            position: absolute;
+            bottom: 0;
+            left: 85px;
+          }
+        }
+        .b-red{
+          .f18;
+          color: @mainColor;
+          font-weight: bold;
+        }
       }
     }
     .market-panel{
+      position: relative;
       width: 940px;
+      .top{
+        border-left: 5px solid @mainColor;
+        padding-left: 20px;
+        color: #000;
+        letter-spacing: 3px;
+        padding-bottom: 5px;
+        .f18;
+        .title{
+          padding-bottom: 10px;
+        }
+        .cons{
+          color: @mainColor;
+          .word-list{
+            display: inline-block;
+            .span{
+              border: 1px solid #90181c;
+              color: @mainColor;
+              padding: 0px 15px;
+              border-radius: 15px;
+              display: inline-block;
+              vertical-align: text-bottom;
+              margin-right: 20px;
+            }
+          }
+          .clearCons{
+            .f16;
+          }
+        }
+        .search-box{
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          height: 55px;
+          padding: 12px 55px 12px 0px;
+          border: 1px solid #000;
+          border-radius: 15px;
+          .input{
+            border: 0;
+            background-color: rgba(0,0,0,0);
+            padding-left: 10px;
+          }
+          .iconfont{
+            position: absolute;
+            font-size: 28px;
+            top: 5px;
+            right: 12px;
+            padding-left: 10px;
+            border-left: 1px solid #000;
+          }
+
+        }
+      }
+      .bottom{
+      }
+    }
+    .nav-page-list{
+      text-align: right;
+      a:hover{
+        font-weight: normal;
+      }
+      .label{
+        .f18;
+        color: #000;
+        font-weight: normal;
+      }
+      .page-jump{
+        .f16;
+        width: 80px;
+        margin: 0;
+        padding: 9px 15px;
+        border: 1px solid @mainColor;
+        background-color: #f3f3f5;
+        vertical-align: baseline;
+      }
+      .btn-link{
+        .f16;
+        color: #000;
+        margin: 0 4px;
+        padding: 9px 10px;
+        border: 1px solid @mainColor;
+      }
+      .prev,.next{
+        padding: 9px 15px;
+      }
+      .str,.end{
+        padding: 9px 25px;
+      }
+    }
+    .big-title{
+      .font;
+      font-size: 30px;
+      letter-spacing: 5px;
+      color: #000;
+      margin: 80px 0 35px 0px;
+
+    }
+    .rec-historys{
+      .commodity-box{
+        width: 280px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        .words{
+          .times,.sp_2{
+            padding-left: 0;
+          }
+        }
+        .price{
+          .btn-link{
+            right: 10px;
+          }
+          a:hover{
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .pay-process{
+      margin-top: 90px;
+      border-bottom: 1px solid #000;
+      text-align: center;
+      background-color: #fff;
+      .box{
+        display: inline-block;
+        width: 115px;
+        padding: 18px 0;
+        margin: 0 75px;
+        .img-box{
+          width: 100%;
+          height: 65px;
+          img{
+            margin: auto;
+          }
+        }
+        p.p{
+          color: #000;
+          .f24;
+          line-height: 2;
+        }
+      }
+      a:hover{
+        font-weight: normal;
+      }
     }
   }
 }

@@ -1283,12 +1283,89 @@ section .con_9 .btn-link:hover .line {
 .page_auction .page_con_2 a:hover {
   font-weight: bold;
 }
+.page_auction .page_con_2 .content {
+  padding-top: 35px;
+}
+.page_auction .page_con_2 .content .commodity-box {
+  position: relative;
+  width: 300px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  float: left;
+}
+.page_auction .page_con_2 .content .commodity-box .img-box {
+  width: 100%;
+  height: 300px;
+}
+.page_auction .page_con_2 .content .commodity-box .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.page_auction .page_con_2 .content .commodity-box .title,
+.page_auction .page_con_2 .content .commodity-box .words {
+  padding-left: 30px;
+}
+.page_auction .page_con_2 .content .commodity-box .title {
+  font-size: 24px;
+  color: #000;
+  line-height: 3;
+  border-top: 1px solid #f3f3f5;
+}
+.page_auction .page_con_2 .content .commodity-box .words {
+  color: #666666;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.page_auction .page_con_2 .content .commodity-box .words p.p {
+  line-height: 32px;
+}
+.page_auction .page_con_2 .content .commodity-box .words .sp_1 {
+  width: 135px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.page_auction .page_con_2 .content .commodity-box .words .times {
+  color: #666;
+  padding-left: 15px;
+}
+.page_auction .page_con_2 .content .commodity-box .words .times span {
+  color: #90181c;
+}
+.page_auction .page_con_2 .content .commodity-box .words .sp_2 {
+  color: #90181c;
+  padding-left: 15px;
+}
+.page_auction .page_con_2 .content .commodity-box .price {
+  color: #90181c;
+  padding-bottom: 15px;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+  padding-left: 30px;
+}
+.page_auction .page_con_2 .content .commodity-box .price .fa-30px {
+  font-size: 30px;
+}
+.page_auction .page_con_2 .content .commodity-box .price .btn-link {
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  padding: 5px 15px;
+  background: #90181c;
+  color: white;
+}
+.page_auction .page_con_2 .content .m-0-2 {
+  margin: 0 20px;
+}
 .page_auction .page_con_2 .search-panel,
 .page_auction .page_con_2 .market-panel {
   float: left;
 }
 .page_auction .page_con_2 .search-panel {
   width: 260px;
+  padding: 0 20px;
 }
 .page_auction .page_con_2 .search-panel .title {
   position: relative;
@@ -1336,13 +1413,217 @@ section .con_9 .btn-link:hover .line {
 .page_auction .page_con_2 .search-panel .checkbox-list .list-row .long {
   width: 160px;
 }
-.page_auction .page_con_2 .search-panel .commodity,
-.page_auction .page_con_2 .search-panel .price,
-.page_auction .page_con_2 .search-panel .time {
-  padding: 0 20px;
+.page_auction .page_con_2 .search-panel .form-dateTime {
+  font-size: 0;
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: 30px;
+}
+.page_auction .page_con_2 .search-panel .form-dateTime .to {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: bottom;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  background-color: #90181c;
+}
+.page_auction .page_con_2 .search-panel .form-dateTime .input {
+  display: inline-block;
+  width: 43%;
+  height: 30px;
+  font-size: 14px;
+  color: #666666;
+  padding: 0 5px;
+}
+.page_auction .page_con_2 .search-panel .form-dateTime .btn_link {
+  font-size: 18px;
+  color: inherit;
+  display: inline-block;
+  padding: 3px 45px;
+  color: #90181c;
+  border: 1px solid #90181c;
+  margin-top: 35px;
+  float: right;
+}
+.page_auction .page_con_2 .search-panel .recommend .btn-link {
+  display: block;
+  margin: 28px 0;
+}
+.page_auction .page_con_2 .search-panel .recommend .img-box {
+  float: left;
+  width: 72px;
+  height: 72px;
+}
+.page_auction .page_con_2 .search-panel .recommend .word-list {
+  position: relative;
+  height: 72px;
+  color: #2b2b2b;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  padding-left: 85px;
+}
+.page_auction .page_con_2 .search-panel .recommend .word-list .p1 {
+  line-height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page_auction .page_con_2 .search-panel .recommend .word-list .p2 {
+  position: absolute;
+  bottom: 0;
+  left: 85px;
+}
+.page_auction .page_con_2 .search-panel .recommend .b-red {
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+  color: #90181c;
+  font-weight: bold;
 }
 .page_auction .page_con_2 .market-panel {
+  position: relative;
   width: 940px;
+}
+.page_auction .page_con_2 .market-panel .top {
+  border-left: 5px solid #90181c;
+  padding-left: 20px;
+  color: #000;
+  letter-spacing: 3px;
+  padding-bottom: 5px;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+}
+.page_auction .page_con_2 .market-panel .top .title {
+  padding-bottom: 10px;
+}
+.page_auction .page_con_2 .market-panel .top .cons {
+  color: #90181c;
+}
+.page_auction .page_con_2 .market-panel .top .cons .word-list {
+  display: inline-block;
+}
+.page_auction .page_con_2 .market-panel .top .cons .word-list .span {
+  border: 1px solid #90181c;
+  color: #90181c;
+  padding: 0px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 20px;
+}
+.page_auction .page_con_2 .market-panel .top .cons .clearCons {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+.page_auction .page_con_2 .market-panel .top .search-box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 55px;
+  padding: 12px 55px 12px 0px;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+.page_auction .page_con_2 .market-panel .top .search-box .input {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 10px;
+}
+.page_auction .page_con_2 .market-panel .top .search-box .iconfont {
+  position: absolute;
+  font-size: 28px;
+  top: 5px;
+  right: 12px;
+  padding-left: 10px;
+  border-left: 1px solid #000;
+}
+.page_auction .page_con_2 .nav-page-list {
+  text-align: right;
+}
+.page_auction .page_con_2 .nav-page-list a:hover {
+  font-weight: normal;
+}
+.page_auction .page_con_2 .nav-page-list .label {
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+  color: #000;
+  font-weight: normal;
+}
+.page_auction .page_con_2 .nav-page-list .page-jump {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  width: 80px;
+  margin: 0;
+  padding: 9px 15px;
+  border: 1px solid #90181c;
+  background-color: #f3f3f5;
+  vertical-align: baseline;
+}
+.page_auction .page_con_2 .nav-page-list .btn-link {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  color: #000;
+  margin: 0 4px;
+  padding: 9px 10px;
+  border: 1px solid #90181c;
+}
+.page_auction .page_con_2 .nav-page-list .prev,
+.page_auction .page_con_2 .nav-page-list .next {
+  padding: 9px 15px;
+}
+.page_auction .page_con_2 .nav-page-list .str,
+.page_auction .page_con_2 .nav-page-list .end {
+  padding: 9px 25px;
+}
+.page_auction .page_con_2 .big-title {
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #000;
+  margin: 80px 0 35px 0px;
+}
+.page_auction .page_con_2 .rec-historys .commodity-box {
+  width: 280px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+.page_auction .page_con_2 .rec-historys .commodity-box .words .times,
+.page_auction .page_con_2 .rec-historys .commodity-box .words .sp_2 {
+  padding-left: 0;
+}
+.page_auction .page_con_2 .rec-historys .commodity-box .price .btn-link {
+  right: 10px;
+}
+.page_auction .page_con_2 .rec-historys .commodity-box .price a:hover {
+  font-weight: normal;
+}
+.page_auction .page_con_2 .pay-process {
+  margin-top: 90px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  background-color: #fff;
+}
+.page_auction .page_con_2 .pay-process .box {
+  display: inline-block;
+  width: 115px;
+  padding: 18px 0;
+  margin: 0 75px;
+}
+.page_auction .page_con_2 .pay-process .box .img-box {
+  width: 100%;
+  height: 65px;
+}
+.page_auction .page_con_2 .pay-process .box .img-box img {
+  margin: auto;
+}
+.page_auction .page_con_2 .pay-process .box p.p {
+  color: #000;
+  font-family: "Microsoft YaHei";
+  font-size: 24px;
+  line-height: 2;
+}
+.page_auction .page_con_2 .pay-process a:hover {
+  font-weight: normal;
 }
 footer {
   color: #757575;
