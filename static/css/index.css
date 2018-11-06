@@ -1275,6 +1275,9 @@ section .con_9 .btn-link:hover .line {
   color: #010101;
   line-height: 48px;
 }
+.page_auction .page_con_1 .word-list .link:hover {
+  color: #90181c;
+}
 .page_auction .page_con_2 a:link,
 .page_auction .page_con_2 a:visited,
 .page_auction .page_con_2 a:active {
@@ -1365,7 +1368,7 @@ section .con_9 .btn-link:hover .line {
 }
 .page_auction .page_con_2 .search-panel {
   width: 260px;
-  padding: 0 20px;
+  padding-right: 20px;
 }
 .page_auction .page_con_2 .search-panel .title {
   position: relative;
@@ -1385,7 +1388,7 @@ section .con_9 .btn-link:hover .line {
   /*黑 透明 透明 */
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 12px;
 }
 .page_auction .page_con_2 .search-panel .checkbox-list {
   padding-bottom: 10px;
@@ -1434,6 +1437,7 @@ section .con_9 .btn-link:hover .line {
   height: 30px;
   font-size: 14px;
   color: #666666;
+  border: 1px solid #90181c;
   padding: 0 5px;
 }
 .page_auction .page_con_2 .search-panel .form-dateTime .btn_link {
@@ -1483,6 +1487,7 @@ section .con_9 .btn-link:hover .line {
 .page_auction .page_con_2 .market-panel {
   position: relative;
   width: 940px;
+  margin-bottom: 50px;
 }
 .page_auction .page_con_2 .market-panel .top {
   border-left: 5px solid #90181c;
@@ -1519,7 +1524,7 @@ section .con_9 .btn-link:hover .line {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 55px;
+  height: 50px;
   padding: 12px 55px 12px 0px;
   border: 1px solid #000;
   border-radius: 15px;

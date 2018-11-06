@@ -726,19 +726,19 @@
                 </a>
                 <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
                     <div class="img-box">
-                        <img src="static/img/wap/icon2.png" data-src="static/img/wap/icon1a.png" class="icon" ></img>
+                        <img src="static/img/wap/icon2.png" data-src="static/img/wap/icon2a.png" class="icon" ></img>
                     </div>
                     <p class="weui-tabbar__label">项目</p>
                 </a>
                 <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
                     <div class="img-box">
-                        <img src="static/img/wap/icon3.png" data-src="static/img/wap/icon2a.png" class="icon" ></img>
+                        <img src="static/img/wap/icon3.png" data-src="static/img/wap/icon3a.png" class="icon" ></img>
                     </div>
                     <p class="weui-tabbar__label">赞助</p>
                 </a>
                 <a href="http://m.lpn.dnsrw.com/index.aspx" class="weui-tabbar__item weui-bar__item_on">
                     <div class="img-box">
-                        <img src="static/img/wap/icon4.png" data-src="static/img/wap/icon3a.png" class="icon" ></img>
+                        <img src="static/img/wap/icon4.png" data-src="static/img/wap/icon4a.png" class="icon" ></img>
                     </div>
                     <p class="weui-tabbar__label">认捐</p>
                 </a>
@@ -755,16 +755,22 @@
     <!--/页面内容-->
 </div>
 <script>
-    if($('.weui-tabbar a').hasClass('on')){
-        var $obj = $('.weui-tabbar .on').find('.icon');
-        var src = $obj.attr('src');
-        var data_src = $obj.attr('data-src');
-        var temp = src;
-        $obj.attr('src',data_src);
-        $obj.attr('data_src',src);
-        $('.weui-tabbar .on .weui-tabbar__label').css({
-            'color':'#de0607'
-        })
+    $('.weui-tabbar a').eq(3).addClass('on').siblings().removeClass('on');
+    function change_foot_nav() {
+        if($('.weui-tabbar a').hasClass('on')){
+            var $obj = $('.weui-tabbar .on').find('.icon');
+            var src = $obj.attr('src');
+            var data_src = $obj.attr('data-src');
+            var temp = src;
+            $obj.attr('src',data_src);
+            $obj.attr('data_src',src);
+            $('.weui-tabbar .on .weui-tabbar__label').css({
+                'color':'#de0607'
+            })
+        }
+    }
+    window.onload = function (ev) {
+        change_foot_nav();
     }
 </script>
 <script>

@@ -450,14 +450,14 @@
                     <div class="cons">
                         筛选条件：
                         <div class="word-list">
-                        <span class="span">
-                            转经筒
-                            <i class="fa fa-remove"></i>
-                        </span>
-                            <span class="span">
-                            摆件
-                            <i class="fa fa-remove"></i>
-                        </span>
+                        <!--<span class="span">-->
+                            <!--转经筒-->
+                            <!--<i class="fa fa-remove"></i>-->
+                        <!--</span>-->
+                        <!--<span class="span">-->
+                            <!--摆件-->
+                            <!--<i class="fa fa-remove"></i>-->
+                        <!--</span>-->
                         </div>
                         <a href="" class="clearCons">
                             清空所有筛选
@@ -1493,6 +1493,7 @@
         </div>
     </div>
 </footer>
+<script src=" https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 <script src="static/Plugins/jquery/jquery-1.11.3.js"></script>
 <script src="static/Plugins/Swiper3/swiper-3.4.2.jquery.min.js"></script>
 <script src="static/Plugins/animate/wow/wow.min.js"></script>
@@ -1556,36 +1557,125 @@
 
     })
 </script>
-<script language="javascript" type="text/javascript">
-    function leftTimer(year, month, day, hour, minute, second) {
-        var leftTime = (new Date(year, month - 1, day, hour, minute, second)) - (new Date()); //计算剩余的毫秒数
-        var days = parseInt(leftTime / 1000 / 60 / 60 / 24, 10); //计算剩余的天数
-        var hours = parseInt(leftTime / 1000 / 60 / 60 % 24, 10); //计算剩余的小时
-        var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟
-        var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数
-        days = checkTime(days);
-        hours = checkTime(hours);
-        minutes = checkTime(minutes);
-        seconds = checkTime(seconds);
-        setInterval("leftTimer(2018,11,11,00,00,00)", 900);
-        // document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";
-        //
-        document.getElementById("day").innerHTML = days;
-        document.getElementById("hour").innerHTML = hours;
-        document.getElementById("min").innerHTML = minutes;
-        document.getElementById("sec").innerHTML = seconds;
-    }
+<div id="aaa" style="height: 200px;background-color: antiquewhite">
+    <span id="day">
 
-    function checkTime(i) { //将0-9的数字前面加上0，例1变为01
-        if (i < 10) {
-            i = "0" + i;
+    </span>
+    <span id="hour">
+
+    </span>
+    <span id="minute">
+
+    </span>
+    <span id="second">
+
+    </span>
+</div>
+<!--<script language="javascript" type="text/javascript">-->
+
+    <!--var time_1 = [2018,11,11,00,00,00];-->
+    <!--function leftTimer($obj,$time_1) {-->
+        <!--var leftTime = (new Date(time_1[0],time_1[1] - 1,time_1[2],time_1[3],time_1[4],time_1[5])) - (new Date()); //计算剩余的毫秒数-->
+        <!--// var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数-->
+        <!--var days = parseInt(leftTime / 1000 / 60 / 60 / 24, 10); //计算剩余的天数-->
+        <!--var hours = parseInt(leftTime / 1000 / 60 / 60 % 24, 10); //计算剩余的小时-->
+        <!--var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟-->
+        <!--var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数-->
+        <!--days = checkTime(days);-->
+        <!--hours = checkTime(hours);-->
+        <!--minutes = checkTime(minutes);-->
+        <!--seconds = checkTime(seconds);-->
+        <!--// setInterval("leftTimer(2018,11,11,00,00,00)", 900);-->
+        <!--// document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";-->
+        <!--leftTime.change(function () {-->
+            <!--$obj.children('#day').text(days+'天');-->
+            <!--$obj.children('#hour').text(hours+'时');-->
+            <!--$obj.children('#minute').text(minutes+'分');-->
+            <!--$obj.children('#second').text(seconds+'秒');-->
+        <!--})-->
+        <!--// document.getElementById("day").innerHTML = days;-->
+        <!--// document.getElementById("hour").innerHTML = hours;-->
+        <!--// document.getElementById("minute").innerHTML = minutes;-->
+        <!--// document.getElementById("second").innerHTML = seconds;-->
+    <!--}-->
+
+    <!--function checkTime(i) { //将0-9的数字前面加上0，例1变为01-->
+        <!--if (i < 10) {-->
+            <!--i = "0" + i;-->
+        <!--}-->
+        <!--return i;-->
+    <!--}-->
+
+    <!--window.onload = function () {-->
+        <!--setInterval(leftTimer($('#aaa'),time_1),1000)-->
+    <!--}-->
+<!--</script>-->
+<script>
+
+</script>
+<!--点击事件-->
+<script>
+    //添加事件
+    var cons_box = $('.market-panel .top .cons').children('.word-list');
+    cons_box.add_Condition = function (obj) {
+
+        var add_span = function (num) {
+            span.addClass('list_box' + num);
+            cons_box.find('.list_box' + num).remove();
+            var text = document.createTextNode(obj.name);
+            //insertBefore(arg，arg)需要两个参数,一个是插入的dom节点，一个是插入的位置
+            // console.log(span[0].insertBefore(text,span[0].childNodes[0]));
+            span[0].insertBefore(text,span[0].childNodes[0])
+            cons_box.append(span);
         }
-        return i;
-    }
 
-    window.onload = function () {
-        // leftTimer()
-    }
+        var span = $('<span class="span"><i class="fa fa-remove"></i></span>');
+        if(obj.name != null && obj.id != null){
+            switch (obj.id) {
+                case 0:
+                    add_span(0);
+                    break;
+                case 1:
+                    add_span(1);
+                    break;
+                default:
+                    alert(obj.id)
+                    break;
+            }
+
+        }
+    };
+
+    $('.checkbox-list').each(function () {
+        //选择框的a标签集合
+        var $list = $(this).find('.btn-link');
+        $list.on('click',function (e) {
+            e.preventDefault();
+            //所有选择框集合
+            var list2 = $('.checkbox-list');
+            //当前点击的所属选择框
+            var this_click_box = $(this).closest('.checkbox-list').get(0);
+            //清空所有选中样式
+            $list.each(function () {
+                $(this).children('.checkbox').removeClass('on');
+            })
+            //为点击的dom添加选中样式
+            $(this).children('.checkbox').addClass('on');
+            //调用添加方法
+            var obj = new Object();
+            obj = $(this);
+            if(this_click_box == list2[0]){
+                obj.id = 0;
+            }else{
+                obj.id = 1;
+            }
+            obj.name = $(this).text().trim();
+            // console.log($(obj).text().trim());
+            // console.log(obj.name)
+            cons_box.add_Condition(obj);
+        })
+    });
+
 </script>
 </body>
 </html>
