@@ -1516,6 +1516,9 @@ section .con_9 .btn-link:hover .line {
   vertical-align: text-bottom;
   margin-right: 20px;
 }
+.page_auction .page_con_2 .market-panel .top .cons .word-list .span .fa-remove {
+  cursor: pointer;
+}
 .page_auction .page_con_2 .market-panel .top .cons .clearCons {
   font-family: "Microsoft YaHei";
   font-size: 16px;
