@@ -208,7 +208,6 @@ i {
 .clearfix::after {
     clear: both;
 }
-
 /*bootstrap*/
 .container {
     padding: 0;

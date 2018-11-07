@@ -192,7 +192,7 @@ body{
 
 //mainColor
 @mainColor:#e40209;
-header{
+#header{
   @this-color:#fff;
   position: relative;
   background-color: #8f171a;
@@ -275,6 +275,7 @@ header{
             background-color: #fff;
             opacity: 0;
             .donghua-03s;
+            display: none;
           }
           .btn_link{
             padding: 0px;
@@ -333,6 +334,9 @@ header{
         }
         .btn-list:hover{
           background-color: #7a090c;
+          .line-top{
+            display: block;
+          }
         }
         .on{
             .line-top{
@@ -426,7 +430,7 @@ header{
   }
 
 }
-section{
+#section{
 
   .banner{
     .swiper-slide{
@@ -457,7 +461,7 @@ section{
         }
       }
       .bak{
-        height: 682px;
+        height: 682 + 8px;
         width: 100%;
       }
       .img-fo{
@@ -485,6 +489,12 @@ section{
             transform:rotate(360deg);
           }
         }
+        @keyframes right_1x{
+
+        }
+        @keyframes right_2x{
+
+        }
       }
       .img-fozi{
         top: 20%;
@@ -510,11 +520,13 @@ section{
         position: absolute;
         left: 0;
         bottom: 0;
+        animation: right_1x 50s linear infinite;
       }
       .img-yun1{
         position: absolute;
         top: 0;
         left: 0;
+        animation: right_2x 50s linear infinite;
       }
       .img-wenzi{
         position: absolute;
@@ -640,6 +652,9 @@ section{
       .btn_link:first-child{
         padding-left: 0;
 
+      }
+      .btn_link.pad-rig-0{
+        padding-right: 0;
       }
       .btn_link:last-child{
         padding-right: 0;
@@ -824,7 +839,8 @@ section{
           }
           .list-row:hover{
             //top: -10px;
-            background: rgba(66,66,66,.5);
+            background-color: rgb(66,66,66);
+            //background-color: rgba(66,66,66,.5);
             .words{
               color: #fff;
             }
@@ -1209,6 +1225,9 @@ section{
     }
     .btn-link:first-child{
       margin-left: 0;
+    }
+    .mar-rig-0{
+      margin-right: 0;
     }
     .btn-link:last-child{
       margin-right: 0;
@@ -1614,7 +1633,7 @@ section{
     }
   }
 }
-footer{
+#footer{
   //reset
   a{
     .donghua-06s;
