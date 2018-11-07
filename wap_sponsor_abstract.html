@@ -45,22 +45,147 @@
         <div class="banner">
             <img src="static/img/wap/banner_abstract.jpg" alt="">
         </div>
-        <div class="con_1">
+            <div class="con_1">
             <div class="sec-title">
                 <i class="line"></i>
                 <span class="sp1">
                     为了明天—关爱儿童
                 </span>
             </div>
-            <div class="tab_box">
-                <div class="lab">
+            <div class="tab_box clearfix">
+                <div class="lab f_l">
                     项目简介
                 </div>
-                <div class="lab">
+                <div class="lab f_r">
                     项目收支
                 </div>
             </div>
-
+            <div class="panels" >
+                <div class="panel_A off">
+                    <div class="words_box">
+                        1、项目背景
+                        “为了明天——关爱儿童”项目是中华慈善总会与全球联合之路在全国范围内启动的长期慈善项目。项目具有全国性、广泛性、持续性的特点，旨在通过组织社会捐赠和志愿服务相结合的形式，与各级慈善会搭建起合作平台，立足于本地区，动员当地多方面资源，共同解决所在地区留守儿童的有关问题。
+                        2、项目目标
+                        中华慈善总会与全球联合之路在全国启动“为了明天——关爱儿童”长期慈善项目。项目具有全国性、广泛性、持续性的特点，旨在通过组织社会捐赠和志愿服务相结合的形式，与各级慈善会搭建起合作平台，立足于本地区，动员当地企业、社会组织、志愿者等各方面资源，共同解决所在地区留守儿童的有关问题。项目通过设立“关爱儿童之家”这一平台，为留守儿童提供一个具有“家”的感觉与氛围的地方，提供迫切需要的多种服务。
+                        3、项目内容
+                        通过在学校、社区等合适的场所设立“关爱儿童之家”，让孩子们愿意到这里来接受各种学习、阅读、玩乐与交流分享。通过心灵关怀、亲情连线及素质培养等服务，重点解决当前存在的亲情失落、学习失教、心理失衡等问题，让他们获得应得的爱与关注，同时，提升学业表现、改善心理健康水平。平台还将为其他家庭成员提供帮助，以助于解决留守儿童面临的各种问题。
+                    </div>
+                </div>
+                <div class="panel_B off">
+                    <div class="words_box">
+                        <div class="p1">
+                            ¥
+                            <span class="sp1">
+                                3000.20
+                            </span>
+                            元
+                        </div>
+                        <div class="p2">
+                            <span>
+                                收到总赞助款项
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-box">
+                        <div class="title">
+                            详细信息
+                        </div>
+                        <div class="word-list">
+                            <div class="nav-list">
+                                <div class="lab f_l">
+                                    金额
+                                </div>
+                                <div class="lab lab_name">
+                                    赞助方
+                                </div>
+                                <div class="lab f_r lab_time">
+                                    时间
+                                </div>
+                            </div>
+                            <div class="words">
+                                <div class="list-row">
+                                    <div class="lab f_l">
+                                        ￥
+                                        <span class="data">
+                                            100
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="lab">
+                                        李晓明
+                                    </div>
+                                    <div class="lab f_r">
+                                        2018/11/5
+                                    </div>
+                                </div>
+                                <div class="list-row">
+                                    <div class="lab f_l">
+                                        ￥
+                                        <span class="data">
+                                            100
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="lab">
+                                        李晓明
+                                    </div>
+                                    <div class="lab f_r">
+                                        2018/11/5
+                                    </div>
+                                </div>
+                                <div class="list-row">
+                                    <div class="lab f_l">
+                                        ￥
+                                        <span class="data">
+                                            100
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="lab">
+                                        李晓明
+                                    </div>
+                                    <div class="lab f_r">
+                                        2018/11/5
+                                    </div>
+                                </div>
+                                <div class="list-row">
+                                    <div class="lab f_l">
+                                        ￥
+                                        <span class="data">
+                                            100
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="lab">
+                                        李晓明
+                                    </div>
+                                    <div class="lab f_r">
+                                        2018/11/5
+                                    </div>
+                                </div>
+                                <div class="list-row">
+                                    <div class="lab f_l">
+                                        ￥
+                                        <span class="data">
+                                            100
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="lab">
+                                        李晓明
+                                    </div>
+                                    <div class="lab f_r">
+                                        2018/11/5
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn-link" id="apply">
+                我要赞助
+            </a>
         </div>
         <!--底部导航-->
         <div class="weui-tab foot-nav">
@@ -148,20 +273,24 @@
 </script>
 <script>
     //选项卡切换
-    $('.form-box').children('.list-row').eq(0).find('.btn-link').on('click',function (e) {
+    $('.con_1 .tab_box').children('.lab').on('click',function (e) {
         e.preventDefault();
         $(this).addClass('on').siblings().removeClass('on')
+        upd()
     })
-    var $radio = $('.form-box').children('.radio-box').find('.radio-list').children().on('click',function (e) {
-        e.preventDefault();
-        $(this).children('.icon-radio').addClass('on').closest('div').siblings().children('.icon-radio').removeClass('on')
-    })
-    $('.frame').on('click',function () {
-        if($(this).hasClass('on')){
-            $(this).removeClass('on')
-            return;
+
+    function upd() {
+        var child = $('.con_1 .tab_box').children('.lab.on');
+        var inx = child.index();
+        var $panens = $('.panels').children();
+        if(child.length==1&&inx!=-1){
+            $panens.eq(inx).show().siblings().hide();
         }
-        $(this).addClass('on');
+    }
+
+    $(document).ready(function () {
+        $('.con_1 .tab_box').children('.lab').eq(0).addClass('on')
+        upd();
     })
 </script>
 </body>
