@@ -1625,10 +1625,11 @@ body {
   background-color: #fff;
 }
 .page_auction .page_con_2 .pay-process .box {
-  display: inline-block;
-  width: 115px;
+  display: block;
+  width: 10%;
   padding: 18px 0;
   margin: 0 75px;
+  float: left;
 }
 .page_auction .page_con_2 .pay-process .box .img-box {
   width: 100%;
@@ -1642,6 +1643,12 @@ body {
   font-family: "Microsoft YaHei";
   font-size: 24px;
   line-height: 2;
+}
+.page_auction .page_con_2 .pay-process .box.mar-lef-0 {
+  margin-left: 0;
+}
+.page_auction .page_con_2 .pay-process .box.mar-rig-0 {
+  margin-right: 0;
 }
 .page_auction .page_con_2 .pay-process a:hover {
   font-weight: normal;

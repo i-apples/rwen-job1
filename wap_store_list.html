@@ -383,7 +383,7 @@
         </div>
         <div class="check-box">
             <div class="header">
-                <div class="icon-box on">
+                <div class="icon-box">
                     <p class="p1"></p>
                     <p class="p2"></p>
                     <p class="p3"></p>
@@ -563,23 +563,49 @@
     })
 </script>
 <script>
-    //选项卡切换
-    $('.form-box').children('.list-row').eq(0).find('.btn-link').on('click',function (e) {
-        e.preventDefault();
-        $(this).addClass('on').siblings().removeClass('on')
+    //tab栏目点击
+    $('.tab-box').on('click',function () {
+        var a ={
+            'top':'0',
+            'display':'block',
+        }
+        $('.check-box').css(a).find('.icon-box').addClass('on');
     })
-    var $radio = $('.form-box').children('.radio-box').find('.radio-list').children().on('click',function (e) {
+    $('.check-box .header .icon-box, .check-box .content .btn-box .submit').on('click',function (e) {
         e.preventDefault();
-        $(this).children('.icon-radio').addClass('on').closest('div').siblings().children('.icon-radio').removeClass('on')
-    })
-    $('.frame').on('click',function () {
-        if($(this).hasClass('on')){
-            $(this).removeClass('on')
+        var icon_box = $('.check-box .header .icon-box').get(0);
+        var a ={
+            'top':'-100%',
+            'display':'none',
+        }
+        if($(this).get(0) == icon_box){
+            icon_box.classList.remove('on');
+            $('.check-box').css(a);
             return;
         }
-        $(this).addClass('on');
+        //把表单提交数据.....
+
+        $('.check-box').css(a);
     })
 </script>
-
+    <!--批量注册点击事件-->
+<script>
+    var list = $('.check-box .content .list-box');
+    list.each(function () {
+        var list = $(this).find('.btn-link');
+        list.on('click',function (e) {
+            e.preventDefault();
+            list.removeClass('on');
+            // bug
+            // console.log($(this))
+            // console.log($(this).hasClass('on'));
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                return;
+            }
+            $(this).addClass('on');
+        })
+    })
+</script>
 </body>
 </html>
