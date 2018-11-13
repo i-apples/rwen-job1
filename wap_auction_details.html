@@ -676,22 +676,22 @@
 </script>
 <script>
     // 支付按钮
-    var apply_btn = $('.modal-footer');
+    var apply_btn1 = $('#readtxt').find('.modal-footer');
 
     $('#apply_box').on('click',function () {
         if($(this).hasClass('on')){
             $(this).removeClass('on');
-            apply_btn.attr('disabled','disabled');
-            apply_btn.removeClass('on');
+            apply_btn1.attr('disabled','disabled');
+            apply_btn1.removeClass('on');
             return;
         }
-        apply_btn.removeAttr('disabled');
-        apply_btn.addClass('on');
+        apply_btn1.removeAttr('disabled');
+        apply_btn1.addClass('on');
         $(this).addClass('on')
     })
 
     // 点击了同意后跳转到的页面
-    apply_btn.on('click',function () {
+    apply_btn1.on('click',function () {
         // console.log(111);
         window.location.href = 'wap_bond.html'
     })
@@ -708,11 +708,10 @@
         //1.从后台取得用户状态，判断是否为该商品缴纳保证金
         //如果已经缴纳保证金 弹1号框 反之弹2号码框
         $.ajax({
-            url:'',
             type:'',
             method:'',
             success:function () {
-
+                $('#bidding').modal();
             },
             error:function () {
                 $('#readtxt').modal();
@@ -720,9 +719,6 @@
         })
 
     })
-</script>
-<script>
-    $('#bidding').modal()
 </script>
 <script>
     var apply_btn = $('#bidding').find('.modal-footer');

@@ -32,7 +32,7 @@
 
 </head>
 <body>
-<header>
+<div id="header">
     <div class="container con_1 m12px">
         <div class="welcome_words">
             <a>
@@ -63,13 +63,13 @@
                     //                         ·getTime　　　　　　｜　获取UTC(世界时间)格式的从1970.1.1 0:00以来的毫秒数
                     var temp = new Date();
                     var year = temp.getFullYear()
-                    var month = temp.getMonth() + 1;
+                    var month = temp.getMonth()+1;
                     var date = temp.getDate();
                     var day = temp.getDay();
-                    var days = ['一', '二', '三', '四', '五', '六', '末']
+                    var days = ['一','二','三','四','五','六','末']
                     var this_time = "今天是：" + year +
                         "年" + month + "月" + date + "日" +
-                        "星期" + days[day - 1];
+                        "星期" + days[day-1];
                     document.write(this_time)
                 </script>
             </a>
@@ -237,8 +237,8 @@
         <img src="static/img/logo.png" alt="" class="center-block logo">
         <p class="p2"></p>
     </div>
-</header>
-<section class="page_auction">
+</div>
+<div class="page_auction">
     <div class="page-banner">
         <img src="static/img/wap/page-banner1.jpg" alt="">
     </div>
@@ -264,7 +264,7 @@
         </div>
     </div>
     <div class="page_con_2">
-        <div class="container content">
+        <div class="container content clearfix">
             <div class="search-panel">
                 <div class="commodity">
                     <div class="title">
@@ -1359,11 +1359,11 @@
 
         </div>
     </div>
-</section>
+</div>
 <div id="totop" style="display: block;">
     <i class="fa fa-arrow-up fa-4x"></i>
 </div>
-<footer>
+<div id="footer">
     <div class="tail">
         <div class="tail-serve">
             <div style="width: 1200px;height: 310px;margin: auto;">
@@ -1371,109 +1371,53 @@
                 <div class="tail-serve-tal wow_no zoomInLeft">
                     <div class="tal-text">全国统一服务热线:</div>
                     <div class="tal-tal">86 88-88888888</div>
-                    <a href="">
-                        <div class="customer-tal">
-                            <div class="customer">在线客服</div>
-                        </div>
-                    </a>
+                    <a href=""><div class="customer-tal"><div class="customer">在线客服</div></div></a>
                 </div>
                 <div class="guide wow_no tada">
                     <div class="guide-bg">
-                        <a href="#">
-                            <div class="guide-text">立即行动</div>
-                        </a>
+                        <a href="#"><div class="guide-text">立即行动</div></a>
                         <div class="guide-ul">
-                            <a href="#">
-                                <div class="guide-li">立即捐款</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">月捐计划</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">如何从身边做起</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">注册</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">分享</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">佛器商城</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">佛器拍卖</div>
-                            </a>
+                            <a href="#"><div class="guide-li">立即捐款</div></a>
+                            <a href="#"><div class="guide-li">月捐计划</div></a>
+                            <a href="#"><div class="guide-li">如何从身边做起</div></a>
+                            <a href="#"><div class="guide-li">注册</div></a>
+                            <a href="#"><div class="guide-li">分享</div></a>
+                            <a href="#"><div class="guide-li">佛器商城</div></a>
+                            <a href="#"><div class="guide-li">佛器拍卖</div></a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#">
-                            <div class="guide-text">基金会简介</div>
-                        </a>
+                        <a href="#"><div class="guide-text">基金会简介</div></a>
                         <div class="guide-ul">
-                            <a href="#">
-                                <div class="guide-li">简介</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">章程</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">组织结构</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">我们的团队</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">联系我们</div>
-                            </a>
+                            <a href="#"><div class="guide-li">简介</div></a>
+                            <a href="#"><div class="guide-li">章程</div></a>
+                            <a href="#"><div class="guide-li">组织结构</div></a>
+                            <a href="#"><div class="guide-li">我们的团队</div></a>
+                            <a href="#"><div class="guide-li">联系我们</div></a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#">
-                            <div class="guide-text">新手指南</div>
-                        </a>
+                        <a href="#"><div class="guide-text">新手指南</div></a>
                         <div class="guide-ul">
-                            <a href="#">
-                                <div class="guide-li">常见问题</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">帮助中心</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">拍卖规则</div>
-                            </a>
+                            <a href="#"><div class="guide-li">常见问题</div></a>
+                            <a href="#"><div class="guide-li">帮助中心</div></a>
+                            <a href="#"><div class="guide-li">拍卖规则</div></a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#">
-                            <div class="guide-text">新闻资讯</div>
-                        </a>
+                        <a href="#"><div class="guide-text">新闻资讯</div></a>
                         <div class="guide-ul">
-                            <a href="#">
-                                <div class="guide-li">最新动态</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">活动专题</div>
-                            </a>
+                            <a href="#"><div class="guide-li">最新动态</div></a>
+                            <a href="#"><div class="guide-li">活动专题</div></a>
                         </div>
                     </div>
                     <div class="guide-bg">
-                        <a href="#">
-                            <div class="guide-text">购物指南</div>
-                        </a>
+                        <a href="#"><div class="guide-text">购物指南</div></a>
                         <div class="guide-ul">
-                            <a href="#">
-                                <div class="guide-li">购物流程</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">会员介绍</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">常见问题</div>
-                            </a>
-                            <a href="#">
-                                <div class="guide-li">联系客服</div>
-                            </a>
+                            <a href="#"><div class="guide-li">购物流程</div></a>
+                            <a href="#"><div class="guide-li">会员介绍</div></a>
+                            <a href="#"><div class="guide-li">常见问题</div></a>
+                            <a href="#"><div class="guide-li">联系客服</div></a>
                         </div>
                     </div>
                 </div>
@@ -1485,16 +1429,14 @@
         </div>
         <div style="width: 100%;height: auto;" class="wow_no bounce">
             <div class="food-ba">
-                <a href="#">
-                    <div class="ba">
-                        法律信息 隐私政策 谨防欺诈 常见问题解答! 沪公网安备 510106888888号
-                        <div>Copyright © 2014-2019 www.bdcf.org.hk All Rights Reserved</div>
-                    </div>
-                </a>
+                <a href="#"><div class="ba">
+                    法律信息 隐私政策 谨防欺诈 常见问题解答!  沪公网安备 510106888888号
+                    <div>Copyright © 2014-2019 www.bdcf.org.hk All Rights Reserved </div>
+                </div></a>
             </div>
         </div>
     </div>
-</footer>
+</div>
 <script src=" https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 <script src="static/Plugins/jquery/jquery-1.11.3.js"></script>
 <script src="static/Plugins/Swiper3/swiper-3.4.2.jquery.min.js"></script>
@@ -1613,7 +1555,33 @@
 <!--}-->
 <!--</script>-->
 <script>
+    // 按钮动画
+    $('.con_2').find('.btn_link').hover(function () {
+        $(this).removeClass('flipInX flipInY bounceInLeft bounceInRight').removeAttr('style');
+        $(this).addClass('animated rubberBand');
+        $(this).animate('.rubberBand');
+    },function () {
+        if ($(this).is('.rubberBand')){
+            $(this).animate('.rubberBand',function () {
+                $(this).stop();
+                $(this).removeClass('rubberBand');
+            })
+        }
+    })
+    $('.li_0').hover(function () {
+        $(this).addClass('pulse infinite')
+    },function () {
+        $(this).animate('.pulse',function () {
+            $(this).removeClass('pulse infinite')
+        })
+    })
 
+    $('.con_2').children('.link-list').find('.nav').children('.btn-list').hover(function (event) {
+        $(this).find('.list-child').stop().slideDown(500);
+
+    },function (event) {
+        $(this).find('.list-child').stop().slideUp(500);
+    })
 </script>
 <!--点击事件-->
 <script>
