@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="static/Plugins/jquery/jquery-1.11.3.js"></script>
+    <script src="static/Plugins/jquery/zoom/jquery.jqzoom.js"></script>
+    <style>
+        /*jQzoom*/
+        .jqzoom{
+            border:1px solid #BBB;
+            float:left;
+            position:relative;
+            padding:0px;
+            cursor:pointer;
+        }
+        div.zoomdiv {
+            z-index:	999;
+            position                : absolute;
+            top:0px;
+            left:0px;
+            width                   : 200px;
+            height                  : 200px;
+            background: #ffffff;
+            border:1px solid #CCCCCC;
+            display:none;
+            text-align: center;
+            overflow: hidden;
+        }
+        div.jqZoomPup {
+            z-index                 : 999;
+            visibility              : hidden;
+            position                : absolute;
+            top:0px;
+            left:0px;
+            width                   : 50px;
+            height                  : 50px;
+            border: 1px solid #aaa;
+            background: #ffffff url(/images/shopping/zoomlens.gif) 50% top  no-repeat;
+            opacity: 0.5;
+            -moz-opacity: 0.5;
+            -khtml-opacity: 0.5;
+            filter: alpha(Opacity=50);
+        }
+        #zoom{
+            width: 500px;
+            height: 500px;
+
+        }
+        #zoom img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="zoom" class="zoom">
+    <img src="static/img/banner.jpg" style="width:300px; height:300px;" alt=""  jqimg="static/img/banner.jpg" id="bigImg"/>
+</div>
+<div id="target"></div>
+<script>
+    /*使用jqzoom*/
+    $(function() {
+        $("#zoom").jqueryzoom({
+            xzoom: 300, //放大图的宽度(默认是 200)
+            yzoom: 300, //放大图的高度(默认是 200)
+            offset: 10, //离原图的距离(默认是 10)
+            position: "right", //放大图的定位(默认是 "right")
+            preload: 1
+        });
+    });
+</script>
+</body>
+</html>

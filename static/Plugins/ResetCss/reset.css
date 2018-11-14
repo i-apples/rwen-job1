@@ -219,6 +219,9 @@ a:visited,a:active,a:link,a:hover{
     color: unset;
     background: unset;
 }
+.container{
+    min-width: 1200px;
+}
 @media (min-width: 1200px){
     .container {
         width: 1200px;

@@ -561,58 +561,27 @@
 <!--<script src="static/Plugins/scroll/jquery.mCustomScrollbar.concat.min.js"></script>-->
 
 <script>
-    // 按钮动画
-    $('.con_2').find('.btn_link').hover(function () {
-        $(this).removeClass('flipInX flipInY bounceInLeft bounceInRight').removeAttr('style');
-        $(this).addClass('animated rubberBand');
-        $(this).animate('.rubberBand');
-    }, function () {
-        if ($(this).is('.rubberBand')) {
-            $(this).animate('.rubberBand', function () {
-                $(this).stop();
-                $(this).removeClass('rubberBand');
+    // 点击事件
+    var click_active = function($obj){
+        for (var j = 0;j<$obj.length;j++){
+            $obj[j].children().on('click',function (e) {
+                e.preventDefault();
+                $(this).addClass('on').siblings().removeClass('on');
             })
         }
-    })
-
-
-    $('.li_0').hover(function () {
-        $(this).addClass('pulse infinite')
-    }, function () {
-        $(this).animate('.pulse', function () {
-            $(this).removeClass('pulse infinite')
-        })
-    })
-</script>
-<script>
-    //wowJs
-    wow = new WOW(
-        {
-            boxClass: 'wow',      // default
-            animateClass: 'animated', // default
-            offset: 10,          // default
-            mobile: true,       // default
-            live: true        // default
+    }
+    click_active([
+        $('.form-box .btn-list'),
+        $('.form-box .radio-box .radio-list'),
+    ]);
+    $('.form-box .apply-box ').find('i.frame').on('click',function () {
+        if($(this).hasClass('on')){
+            $(this).removeClass('on');
+            return;
         }
-    )
-    wow.init();
-</script>
-<script>
-    $('#str_time,#end_time').datetimepicker({
-        language: 'zh',
-        minView: "month",
-        format: "dd/mm/yyyy",//日期格式
-        weekStart: 1,
-        todayBtn: 1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 3,
-        forceParse: 0,
-        showMeridian: 0
-    });
-    $('#str_time,#end_time').datetimepicker().on('changeDate', function () {
-
+        $(this).addClass('on');
     })
+
 </script>
 <div id="aaa" style="height: 200px;background-color: antiquewhite">
     <span id="day">
@@ -638,11 +607,11 @@
     })
     //输入框得到焦点时
     a.on('focus',function(){
-        b.stop().slideDown(500);
+        // b.stop().slideDown(500);
     })
     //输入框失去焦点时
     a.on('blur',function(){
-        b.stop().slideUp(500);
+        b.stop().slideToggle(500);
     })
 
     function updata_select($obj) {
@@ -653,16 +622,21 @@
             for (var j = 1; j < arr.length - i; j++) {
             }
         }
-        //点击替换input的值 事件..。
-        b.children('.list-row').on('click',function (e) {
-            e.preventDefault();         //阻止默认行为。..
-            var text = $(this).text().trim();
-            alert(text);
-            if(text.length >0 && text.length < 50){
-                return;
-            }
-        })
     }
+    //点击替换input的值 事件..。
+    b.children('.list-row').on('click',function (e) {
+        e.preventDefault();         //阻止默认行为。..
+        var text = $(this).text().trim();
+        if(text.length >0 && text.length < 50){
+            a.val(text);
+            b.stop().slideToggle(500);
+            return;
+        }
+    })
+    $('#inp_select').siblings('.icon-sanjiao').on('click',function (e) {
+        e.preventDefault();;
+        b.stop().slideToggle(500);
+    })
 </script>
 <script>
     $("#totop").click(function() {
