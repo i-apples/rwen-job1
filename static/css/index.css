@@ -1,4 +1,7 @@
 @charset "utf-8";
+html {
+  min-width: 1200px;
+}
 .mobile {
   display: none;
 }
@@ -273,9 +276,6 @@
   background-color: #fff;
   color: #e40209;
 }
-#header .btn_list .btn_register {
-  margin-right: -15px;
-}
 #header .btn_list .line {
   position: relative;
   display: inline-block;
@@ -303,6 +303,11 @@
   padding-bottom: 10px;
   font-family: "Microsoft YaHei";
   font-size: 18px;
+}
+#header .con_2 .list_lef,
+#header .con_2 .list_rig {
+  width: 50%;
+  float: left;
 }
 #header .con_2 .list_lef .nav,
 #header .con_2 .list_rig .nav {
@@ -430,9 +435,6 @@
 }
 #header .con_2 .list_rig .nav .btn-list {
   margin-left: 60px;
-}
-#header .con_2 .list_rig .nav .btn-list:last-child {
-  margin-right: -20px;
 }
 #header .con_2 .list_rig .nav .btn-list:last-child .list-child {
   right: -20px;
