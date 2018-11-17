@@ -27,14 +27,6 @@ $(function(){
 	$("#tabHead").smartFloat();
 	//初始化规格事件
 	initGoodsSpec('{config.webpath}tools/submit_ajax.ashx?action=get_article_goods_info&channel_id={model.channel_id}');
-
-    $('#commoditySellPrice').bind('DOMNodeInserted',function (e) {
-        var words = $(this).text();
-        console.log(words);
-        // var words = 'h¥e¥ll¥o w¥old¥er';
-        $(this).text(words.replace("¥", ""))
-        console.log(words);
-    })
 });
 </script>
 </head>
@@ -133,9 +125,9 @@ $(function(){
                             <dl class="price-line">
                                 <dt>价格</dt>
                                 <dd>
-                                    <div class="price p2 p">
+                                    <div class="price p2 p" id="commoditySellPrice">
                                         ¥
-                                        <span class="data" id="commoditySellPrice">
+                                        <span class="data">
                                             {model.fields[sell_price]}
                                         </span>
                                     </div>
@@ -161,58 +153,124 @@ $(function(){
                                 <dt>单号</dt>
                                 <dd id="commodityGoodsNo">{model.fields[goods_no]}</dd>
                             </dl>
-                            <!--<dl class="promotion">-->
-                                <!--<dt>促销</dt>-->
-                                <!--<dd>-->
-                                    <!--<div class="promotionType" data-promotionType="">-->
-                                        <!--满赠-->
-                                    <!--</div>-->
-                                    <!--<div class="words" data-promotionWords="">-->
-                                        <!--满-->
-                                        <!--<span class="data">-->
-                                            <!--50-->
-                                        <!--</span>-->
-                                        <!--元赠-->
-                                        <!--<span class="data">-->
-                                            <!--30-->
-                                        <!--</span>-->
-                                        <!--元-->
-                                    <!--</div>-->
-                                <!--</dd>-->
-                            <!--</dl>-->
+                            <dl class="promotion">
+                                <dt>促销</dt>
+                                <dd>
+                                    <div class="promotionType" data-promotionType="">
+                                        满赠
+                                    </div>
+                                    <div class="words" data-promotionWords="">
+                                        满
+                                        <span class="data">
+                                            50
+                                        </span>
+                                        元赠
+                                        <span class="data">
+                                            30
+                                        </span>
+                                        元
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="address">
+                                <dt>
+                                    配送至
+                                </dt>
+                                <div class="drop-box">
+                                    <label class="lab">
+                                        四川成都
+                                        <i class="fa fa-angle-down"></i>
+                                    </label>
+                                    <div class="select-box-list">
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                        <div class="list-row">
+                                            专项基金
+                                        </div>
+                                    </div>
+                                </div>
+                            </dl>
                             <div class="spec-box line"></div>
-                            <div class="spec-box line" id="goodsSpecBox">
-                                <!--商品规格-->
-                                <%set List<RWcms.Model.article_goods_spec> specList=get_article_goods_spec(model.channel_id, model.id, "parent_id=0")%>
-                                <%if(specList!=null)%>
-                                <%foreach(RWcms.Model.article_goods_spec modelt1 in specList)%>
-                                <dl>
-                                    <dt>{modelt1.title}</dt>
-                                    <dd>
-                                        <ul class="items clearfix">
-                                            <!--规格选项-->
-                                            <%set List<RWcms.Model.article_goods_spec> itemList=get_article_goods_spec(model.channel_id, model.id, "parent_id="+modelt1.spec_id)%>
-                                            <%if(itemList!=null)%>
-                                            <%foreach(RWcms.Model.article_goods_spec modelt2 in itemList)%>
-                                            <li>
-                                                <a specid="{modelt2.spec_id}" title="{modelt2.title}" href="javascript:;">
-                                                    <%if(modelt2.img_url!=null&&modelt2.img_url!="")%>
-                                                    <img src="{modelt2.img_url}" />
-                                                    <%else%>
-                                                    <span>{modelt2.title}</span>
-                                                    <%/if%>
-                                                </a>
-                                            </li>
-                                            <%/foreach%>
-                                            <%/if%>
-                                            <!--/规格选项-->
-                                        </ul>
-                                    </dd>
-                                </dl>
-                                <%/foreach%>
-                                <%/if%>
-                                <!--/商品规格-->
-                            </div>
+                            <dl class="type-choice">
+                                <dt>选择</dt>
+                                <dd>
+                                    <div class="btn-list">
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                        <div class="btn-link">
+                                            <img src="static/img/img9.png" class="img">
+                                            <span class="name">
+                                            莲花灯
+                                        </span>
+                                            <span class="size">
+                                            小号
+                                        </span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
                         </div>
 
                         <div class="spec-box line"></div>
@@ -250,7 +308,7 @@ $(function(){
 
                         <div class="pay-box">
                             <a href="" class="pay-add" onclick="cartAdd(this,'/',1,'/shopping.aspx');"> 加入购物车 </a>
-                            <a href="" class="pay-buy" onclick="cartAdd(this,'/',1,'/shopping.aspx');"> 立即购买 </a>
+                            <a href="" class="pay-buy" onclick="cartAdd(this,'/',1,'/shopping.aspx');"> 立即认捐 </a>
                         </div>
                     </div>
                     <!--/商品信息-->
