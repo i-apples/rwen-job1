@@ -30,7 +30,6 @@ $(function(){
 <!--页面头部-->
 <%template src="_header.html"%>
 <!--/页面头部-->
-
 <!--当前位置-->
 <div class="section">
     <div class="p-l-1_5 container">
@@ -79,17 +78,21 @@ $(function(){
                     <div class="big-title">
                         最新动态
                     </div>
-                    <%set DataTable topNewsList=get_article_list(channel, 0, 4, "status=0 and is_top=1 and img_url<>''")%>
-                    <%loop topdr topNewsList%>
-                    <div class="list-row">
+                    <%set DataTable dt3=get_article_list(channel, 3, "status=0 ")%>
+                    <%foreach(DataRow dr1 in dt3.Rows)%>
+
+
+                    <a title="{dr1[title]}" href="<%linkurl("news_show",{dr1[id]})%>" class="list-row">
                         <div class="word-title">
-                            第25届 佛陀圣地—蓝毗尼吉祥大会
+                            {dr1[title]}
                         </div>
                         <div class="word-details">
-                            第25届 佛陀圣地—蓝毗尼吉祥大会第25届 佛陀第25届 佛陀
+                            {dr1[zhaiyao]}
                         </div>
-                    </div>
-                    <%/loop%>
+                    </a>
+                    <%/foreach%>
+
+
                 </div>
             </div>
         </div>
@@ -135,9 +138,11 @@ $(function(){
                                         {dr1[add_time]}
                                     </span>
                                     <span class="sp2">
-                                        {dr1[add_time]}人评论
+                                        <script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_comment_count&channel_id={dr1[channel_id]}&id={dr1[id]}"></script>
+                                        人评论
                                     </span>
                                     <span class="sp3">
+                                        <script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_article_click&channel_id={dr1[channel_id]}&id={dr1[id]}&click=1"></script>
                                         次浏览
                                     </span>
                                 </div>

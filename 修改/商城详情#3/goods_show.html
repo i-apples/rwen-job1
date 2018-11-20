@@ -30,10 +30,7 @@ $(function(){
 
     $('#commoditySellPrice').bind('DOMNodeInserted',function (e) {
         var words = $(this).text();
-        console.log(words);
-        // var words = 'h¥e¥ll¥o w¥old¥er';
         $(this).text(words.replace("¥", ""))
-        console.log(words);
     })
 });
 </script>
@@ -142,18 +139,19 @@ $(function(){
                                     <div class="p3 p p-l-3">
                                         [ ¥
                                         <span class="data">
-                                            234
+                                            {model.fields[market_price]}
+                                           
                                         </span>
                                         元 ]
                                     </div>
-                                    <div class="p4 p comment">
+                                    <!--<div class="p4 p comment">
                                         <span class="sp1">
                                             评价
                                         </span>
                                         <span class="sp2">
                                             10+
                                         </span>
-                                    </div>
+                                    </div>-->
                                 </dd>
 
                             </dl>
@@ -180,7 +178,6 @@ $(function(){
                                     <!--</div>-->
                                 <!--</dd>-->
                             <!--</dl>-->
-                            <div class="spec-box line"></div>
                             <div class="spec-box line" id="goodsSpecBox">
                                 <!--商品规格-->
                                 <%set List<RWcms.Model.article_goods_spec> specList=get_article_goods_spec(model.channel_id, model.id, "parent_id=0")%>
@@ -215,11 +212,9 @@ $(function(){
                             </div>
                         </div>
 
-                        <div class="spec-box line"></div>
-
                         <div class="spec-box">
                             <dl>
-                                <dt>认捐数量</dt>
+                                <dt>数量</dt>
                                 <dd>
                                     <div class="stock-box">
                                         <input id="commodityChannelId" type="hidden" value="{model.channel_id}" />
@@ -301,42 +296,22 @@ $(function(){
                             热销
                         </h1>
                         <div class="btn-list">
-                            <a href="" class="btn-link">
+                            <%set DataTable redGoods=get_article_list("goods",  3, "id<>"+model.id+" and status=0 and is_red=1 and img_url <> '' and img_url is not null")%>
+
+                            <%foreach(DataRow dr in redGoods.Rows)%>
+                            <a href="goods_show.aspx?id={dr[id]}" class="btn-link">
                                 <div class="img-box">
-                                    <img src="static/img/img11.jpg" class="img">
+                                    <img src="{dr[img_url]}"  class="img">
                                 </div>
                                 <div class="title">
                                     ¥
-                                    <span class="data">
-                                234
-                            </span>
+                                    <span class="data">{dr[sell_price]}</span>
                                     元
                                 </div>
                             </a>
-                            <a href="" class="btn-link">
-                                <div class="img-box">
-                                    <img src="static/img/img11.jpg" class="img">
-                                </div>
-                                <div class="title">
-                                    ¥
-                                    <span class="data">
-                                234
-                            </span>
-                                    元
-                                </div>
-                            </a>
-                            <a href="" class="btn-link">
-                                <div class="img-box">
-                                    <img src="static/img/img11.jpg" class="img">
-                                </div>
-                                <div class="title">
-                                    ¥
-                                    <span class="data">
-                                234
-                            </span>
-                                    元
-                                </div>
-                            </a>
+
+                            <%/foreach%>
+                          
                         </div>
                     </div>
                 </div>

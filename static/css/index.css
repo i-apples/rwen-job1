@@ -2062,7 +2062,11 @@ html {
 }
 .page_sponsor .content .panel-left {
   width: 875px;
+  text-align: left;
   float: left;
+}
+.page_sponsor .content .panel-left .title-big {
+  padding-left: 45px;
 }
 .page_sponsor .content .panel-left .form-box {
   caret-color: auto;
@@ -2095,7 +2099,7 @@ html {
   float: left;
 }
 .page_sponsor .content .panel-left .form-box .list-row .btn-list .btn-link.middle {
-  margin: 0 115px;
+  margin: 0 105px;
 }
 .page_sponsor .content .panel-left .form-box .list-row .btn-list .btn-link.on {
   background-color: #de0607;
@@ -2116,12 +2120,14 @@ html {
   border: 0;
   caret-color: #de0607;
   background-color: #f9f9f9;
-  text-align: center;
+  text-align: right;
 }
 .page_sponsor .content .panel-left .form-box .list-row .input-box .sp1 {
+  padding-right: 10px;
   font-size: 24px;
   color: #666;
   line-height: 55px;
+  float: right;
 }
 .page_sponsor .content .panel-left .form-box .list-row .input-box .icon-sanjiao {
   border-color: #666 transparent transparent;
@@ -2285,6 +2291,9 @@ html {
 }
 .page_sponsor .content .panel-right {
   width: 180px;
+  height: 1080px;
+  overflow: hidden;
+  text-align: left;
   float: right;
 }
 .page_sponsor .content .panel-right .rec_project {
@@ -2306,7 +2315,7 @@ html {
   white-space: nowrap;
 }
 .page_sponsor .content .panel-right .rec_project .word-list {
-  padding-bottom: 30px;
+  padding-bottom: 37px;
   font-size: 16px;
   color: #666666;
 }

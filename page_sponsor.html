@@ -252,13 +252,22 @@
                     </lebel>
                     <div class="btn-list">
                         <a href="" class="btn-link">
-                            50元
+                            <span class="data">
+                                50
+                            </span>
+                            元
                         </a>
                         <a href="" class="btn-link middle">
-                            100元
+                            <span class="data">
+                                100
+                            </span>
+                            元
                         </a>
                         <a href="" class="btn-link mar-rig-0">
-                            200元
+                            <span class="data">
+                                200
+                            </span>
+                            元
                         </a>
                     </div>
                 </div>
@@ -381,95 +390,118 @@
                 <div class="title-big">
                     项目推荐
                 </div>
-                <div class="img-box">
-                    <img src="static/img/img6.jpg" class="img">
-                </div>
-                <div class="title">
-                    "佛教公益"项目
-                </div>
-                <div class="word-list">
-                    <div class="icon-box">
+                <ul>
+                    <li>
+                        <div class="img-box">
+                            <img src="<%templateskin%>/static/img/img6.jpg" class="img">
+                        </div>
                         <div class="title">
-                            进度
+                            "佛教公益"项目
                         </div>
-                        <div class="box">
-                            <div class="line">
+                        <div class="word-list">
+                            <div class="icon-box">
+                                <div class="title">
+                                    进度
+                                </div>
+                                <div class="box">
+                                    <div class="line project-progress">
 
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        <span class="data">
+                                            23
+                                        </span>
+                                        人
+                                    </div>
+                                    <div class="word">
+                                        赞助人数
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        ¥
+                                        <span class="data peoples">
+                                            66
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="word">
+                                        已筹款
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        ¥
+                                        <span class="data target">
+                                            66
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="word">
+                                        筹款目标
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
+                    </li>
+                    <li>
+                        <div class="img-box">
+                            <img src="<%templateskin%>/static/img/img6.jpg" class="img">
                         </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
-                        </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rec_project">
-                <div class="title-big">
-                    项目推荐
-                </div>
-                <div class="img-box">
-                    <img src="static/img/img6.jpg" class="img">
-                </div>
-                <div class="title">
-                    "佛教公益"项目
-                </div>
-                <div class="word-list">
-                    <div class="icon-box">
                         <div class="title">
-                            进度
+                            "佛教公益"项目
                         </div>
-                        <div class="box">
-                            <div class="line">
+                        <div class="word-list">
+                            <div class="icon-box">
+                                <div class="title">
+                                    进度
+                                </div>
+                                <div class="box">
+                                    <div class="line project-progress">
 
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        <span class="data">
+                                            23
+                                        </span>
+                                        人
+                                    </div>
+                                    <div class="word">
+                                        赞助人数
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        ¥
+                                        <span class="data peoples">
+                                            66
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="word">
+                                        已筹款
+                                    </div>
+                                </div>
+                                <div class="words">
+                                    <div class="title">
+                                        ¥
+                                        <span class="data target">
+                                            66
+                                        </span>
+                                        元
+                                    </div>
+                                    <div class="word">
+                                        筹款目标
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
-                        </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
-                        </div>
-                        <div class="words">
-                            <div class="title">
-                                66人
-                            </div>
-                            <div class="word">
-                                赞助人数
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -574,6 +606,13 @@
         $('.form-box .btn-list'),
         $('.form-box .radio-box .radio-list'),
     ]);
+    $('.form-box .btn-list .btn-link').on('click',function () {
+        var val = $(this).children('.data').text().trim();
+        if ( ! isNaN(val) && val >= 0 ) {
+            $('#mj_money').val(val);
+        }
+
+    })
     $('.form-box .apply-box ').find('i.frame').on('click',function () {
         if($(this).hasClass('on')){
             $(this).removeClass('on');
@@ -642,6 +681,32 @@
     $("#totop").click(function() {
         $("html,body").animate({scrollTop:0}, 300);
     });
+</script>
+<script>
+    update_progress();
+    function update_progress() {
+        $('.project-progress').each(function () {
+            var vm = $(this);
+            var a = $(this).closest('.icon-box').find('.peoples').text(); //已筹款
+            var b = $(this).closest('.icon-box').find('.target').text();  //目标筹款
+            var offset = 0;
+
+            vm.css({
+                width:offset+'%'
+            });
+
+            if ( !isNaN(a) && !isNaN(b) ) {
+                if ( ! ( a <= 0 || b <= 0 ) ) {
+                    offset = a / b;
+                    vm.css({
+                        width:offset+'%'
+                    });
+                    return;
+                }
+                return;
+            }
+        })
+    }
 </script>
 </body>
 </html>
