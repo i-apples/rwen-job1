@@ -183,7 +183,7 @@ html {
   width: 80px;
   margin: 0;
   padding: 9px 15px;
-  border: 1px solid #e40209;
+  border: 1px solid #90181c;
   background-color: #f3f3f5;
   vertical-align: baseline;
 }
@@ -193,7 +193,7 @@ html {
   color: #000;
   margin: 0 4px;
   padding: 9px 10px;
-  border: 1px solid #e40209;
+  border: 1px solid #90181c;
 }
 .nav-page-list .prev,
 .nav-page-list .next {
@@ -274,7 +274,7 @@ html {
 #header .btn_list .btn_login:hover,
 #header .btn_list .btn_register:hover {
   background-color: #fff;
-  color: #e40209;
+  color: #90181c;
 }
 #header .btn_list .line {
   position: relative;
@@ -998,7 +998,7 @@ html {
 #section .con_6 .content .left .option {
   width: max-content;
   padding: 15px 30px;
-  background-color: #e40209;
+  background-color: #90181c;
   font-family: "Microsoft YaHei";
   font-size: 18px;
   color: #fff;
@@ -1071,17 +1071,17 @@ html {
 }
 #section .con_5 .content .middle .link-list .nav li:hover .btn_link,
 #section .con_6 .content .middle .link-list .nav li:hover .btn_link {
-  color: #e40209;
+  color: #90181c;
 }
 #section .con_5 .content .middle .link-list .nav li:hover .btn_link:before,
 #section .con_6 .content .middle .link-list .nav li:hover .btn_link:before {
-  background-color: #e40209;
+  background-color: #90181c;
 }
 #section .con_5 .content .middle .title,
 #section .con_6 .content .middle .title {
   font-family: "Microsoft YaHei";
   font-size: 24px;
-  color: #e40209;
+  color: #90181c;
   text-align: center;
   margin: 60px 0 25px 0;
 }
@@ -1094,7 +1094,7 @@ html {
   padding: 3px 10px;
   font-family: "Microsoft YaHei";
   font-size: 12px;
-  color: #e40209;
+  color: #90181c;
   border-radius: 15px;
   transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1102,7 +1102,7 @@ html {
 }
 #section .con_5 .content .middle .word-list .btn-link:hover,
 #section .con_6 .content .middle .word-list .btn-link:hover {
-  background: #e40209;
+  background: #90181c;
   color: #fff;
 }
 #section .con_5 .content .right,
@@ -1145,7 +1145,7 @@ html {
   padding: 3px 10px;
   font-family: "Microsoft YaHei";
   font-size: 12px;
-  color: #e40209;
+  color: #90181c;
   border-radius: 15px;
   transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1153,7 +1153,7 @@ html {
 }
 #section .con_5 .content .right .link-list .ul_0 .li_0 .word-list .btn-link:hover,
 #section .con_6 .content .right .link-list .ul_0 .li_0 .word-list .btn-link:hover {
-  background: #e40209;
+  background: #90181c;
   color: #fff;
 }
 #section .con_5 .content .right .link-list .ul_0 .li_0 .word-list .btn-link:last-child,
@@ -1163,7 +1163,7 @@ html {
 #section .con_5 .content .right .link-list .ul_0 .li_0 .word-list .hover,
 #section .con_6 .content .right .link-list .ul_0 .li_0 .word-list .hover {
   padding: 3px 10px;
-  background: #e40209;
+  background: #90181c;
   color: #fff;
 }
 #section .con_5 .content .right .link-list .ul_0 .li_0 .img-box,
@@ -1180,7 +1180,7 @@ html {
   content: '\67e5\770b\8be6\60c5';
   position: absolute;
   padding: 5px 20px;
-  background: #e40209;
+  background: #90181c;
   border-radius: 15px;
   bottom: 10px;
   right: 10px;
@@ -1207,7 +1207,7 @@ html {
   vertical-align: bottom;
   font-family: "Microsoft YaHei";
   font-size: 30px;
-  color: #e40209;
+  color: #90181c;
 }
 #section .con_7 .content .icon {
   position: relative;
@@ -1671,6 +1671,7 @@ html {
 }
 .page_auction .page_con_2 .market-panel .top .title {
   padding-bottom: 10px;
+  display: none;
 }
 .page_auction .page_con_2 .market-panel .top .cons {
   color: #90181c;
@@ -2274,7 +2275,7 @@ html {
   background-color: #f1f1f1;
 }
 .page_sponsor .content .panel-left .form-box .apply-box .apply .frame.on {
-  background: #de0607;
+  background: #90181c;
 }
 .page_sponsor .content .panel-left .form-box .apply-box .apply .word {
   font-size: 18px;
@@ -2284,10 +2285,13 @@ html {
   position: absolute;
   padding: 10px 45px;
   color: #fff;
-  background-color: #de0607;
+  background-color: #90181c;
   border: none;
   right: 10px;
   top: 20px;
+}
+.page_sponsor .content .panel-left .form-box .apply-box .submit:hover {
+  background-color: #ab1116;
 }
 .page_sponsor .content .panel-right {
   width: 180px;
@@ -2324,6 +2328,10 @@ html {
   text-align: left;
   color: #666666;
   line-height: 24px;
+}
+.page_sponsor .content .panel-right .rec_project .word-list .icon-box .title .data-percentage {
+  font-size: 12px;
+  color: #90181c;
 }
 .page_sponsor .content .panel-right .rec_project .word-list .icon-box .box {
   height: 10px;
@@ -3000,14 +3008,14 @@ html {
 #footer .tal-tal {
   font-size: 30px;
   font-family: "微软雅黑";
-  color: #e40209;
+  color: #90181c;
   float: left;
   margin: 0 0 0 17px;
 }
 #footer .customer-tal {
   width: 104px;
   height: 32px;
-  background: #e40209;
+  background: #90181c;
   float: right;
   margin: 3px 58px 0 0;
   border-radius: 4px;

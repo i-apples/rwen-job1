@@ -402,6 +402,9 @@
                             <div class="icon-box">
                                 <div class="title">
                                     进度
+                                    <span class="data-percentage">
+                                        %50
+                                    </span>
                                 </div>
                                 <div class="box">
                                     <div class="line project-progress">
@@ -685,27 +688,31 @@
 <script>
     update_progress();
     function update_progress() {
-        $('.project-progress').each(function () {
-            var vm = $(this);
-            var a = $(this).closest('.icon-box').find('.peoples').text(); //已筹款
-            var b = $(this).closest('.icon-box').find('.target').text();  //目标筹款
-            var offset = 0;
+        if($('.project-progress').length>0){
+            $('.project-progress').each(function () {
+                var vm = $(this);
+                var a = $(this).closest('.icon-box').find('.peoples').text(); //已筹款
+                var b = $(this).closest('.icon-box').find('.target').text();  //目标筹款
+                var c = $(this).closest('.icon-box').find('.data-percentage');  //目标筹款
+                var offset = 0;
 
-            vm.css({
-                width:offset+'%'
-            });
+                vm.css({
+                    width:offset+'%'
+                });
 
-            if ( !isNaN(a) && !isNaN(b) ) {
-                if ( ! ( a <= 0 || b <= 0 ) ) {
-                    offset = a / b;
-                    vm.css({
-                        width:offset+'%'
-                    });
+                if ( !isNaN(a) && !isNaN(b) ) {
+                    if ( ! ( a <= 0 || b <= 0 ) ) {
+                        offset = a / b;
+                        vm.css({
+                            width:offset+'%'
+                        });
+                        c.text(offset + "%");
+                        return;
+                    }
                     return;
                 }
-                return;
-            }
-        })
+            })
+        }
     }
 </script>
 </body>

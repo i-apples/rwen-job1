@@ -1,0 +1,462 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{model.title} - {site.name}</title>
+<meta name="keywords" content="{model.seo_keywords}" />
+<meta name="description" content="{model.seo_description}" />
+<link rel="stylesheet" type="text/css" href="{config.webpath}css/pagination.css" />
+<link rel="stylesheet" type="text/css" href="<%templateskin%>/css/style.css" />
+
+<!--dxp-->
+<link href="<%templateskin%>/css/dxp/plugins/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="<%templateskin%>/css/dxp/font/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="<%templateskin%>/css/dxp/font/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="<%templateskin%>/css/dxp/me/dxp.css" rel="stylesheet" type="text/css" />
+<!--dxp-->
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+</head>
+
+<body id="goods">
+<!--页面头部-->
+<%template src="_header.html"%>
+<!--/页面头部-->
+
+<!--当前位置-->
+<div class="section">
+    <div class="p-l-1_5 container">
+        <div class="nav-title">
+            当前位置：
+        </div>
+        <ul class="nav nav-pills">
+            <li>
+                <a href="<%linkurl("index")%>">
+                首页
+                </a>
+            </li>
+            <li>
+                <a href="<%linkurl("goods")%>">
+                购物商城
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--/当前位置-->
+
+
+<section class="page_goods_list">
+    <div class="page_con_1">
+        <div class="container content">
+            <div class="title">
+                <i class="iconfont icon-gonggaoxiaolaba"></i>
+                <span class="sp_1">
+                    活动公告：
+                </span>
+            </div>
+            <div class="word-list">
+                <%set DataTable newsCList=get_article_list("news",59,5,"status=0")%>
+
+                <%foreach(DataRow dr in newsCList.Rows)%>
+                <a class="link" href="<%linkurl("news_show",{dr[id]})%>">
+
+                {dr[title]}
+
+                </a>
+                <%/foreach%>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="page_con_2">
+        <div class="container content">
+            <div class="search-panel">
+                <div class="commodity">
+                    <div class="title">
+                        <h1>
+                            商品分类
+                        </h1>
+                        <!-- <i class="icon-sanjiao"></i> -->
+                    </div>
+                    <div class="checkbox-list">
+                        <div class="list-row clearfix">
+                            <%set DataTable categoryList=get_category_child_list(channel,0)%>
+                            <%foreach(DataRow cdr in categoryList.Rows)%>
+                            <%if(category_id=={strtoint({cdr[id]})})%>
+                            <a href="<%linkurl("auction_gsearch","?category_id="+{cdr[id]})%>" class="btn-link f_l">
+                            <i class="checkbox on">
+
+                            </i>
+                            <span class="span">
+                                {cdr[title]}
+								</span>
+                            </a>
+                            <%else%>
+                            <a href="<%linkurl("auction_gsearch","?category_id="+{cdr[id]})%>" class="btn-link f_l">
+                            <i class="checkbox">
+
+                            </i>
+                            <span class="span">
+                                {cdr[title]}
+								</span>
+                            </a>
+                            <%/if%>
+                            <%/foreach%>
+                        </div>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="title">
+                        <h1>
+                            价格区间
+                        </h1>
+                        <!-- <i class="icon-sanjiao"></i> -->
+                    </div>
+                    <div class="checkbox-list">
+                        <div class="list-row clearfix">
+                            <a href="<%linkurl("auction_gsearch","?category_id="+category_id+"&min_price=0&max_price=10000")%>" class="btn-link long">
+                            <i class="checkbox">
+
+                            </i>
+                            <span class="span">
+                                    0-1W
+                                </span>
+                            </a>
+                            <a href="<%linkurl("auction_gsearch","?category_id="+category_id+"&min_price=0&max_price=20000")%>" class="btn-link">
+                            <i class="checkbox">
+
+                            </i>
+                            <span class="span">
+                                    0-2W
+                                </span>
+                            </a>
+                        </div>
+                        <div class="list-row clearfix">
+                            <a href="<%linkurl("auction_gsearch","?category_id="+category_id+"&min_price=0&max_price=30000")%>" class="btn-link">
+                            <i class="checkbox">
+
+                            </i>
+                            <span class="span">
+                                    0-3W
+                                </span>
+                            </a>
+                            <a href="<%linkurl("auction_gsearch","?category_id="+category_id+"&min_price=0&max_price=40000")%>" class="btn-link">
+                            <i class="checkbox">
+
+                            </i>
+                            <span class="span">
+                                    0-4W
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="title">
+                        <h1>
+                            起拍时间
+                        </h1>
+                        <!-- <i class="icon-sanjiao"></i> -->
+                    </div>
+                    <form class="form-dateTime clearfix" action="/url">
+                        <input class="input" size="16" type="text" id="str_time" readonly>
+                        <i class="to">To</i>
+                        <input class="input" size="16" type="text" id="end_time" readonly>
+                        <a href="" class="btn_link submit">确定</a>
+                    </form>
+                </div>
+                <div class="recommend">
+                    <div class="title">
+                        <h1>
+                            拍品推荐
+                        </h1>
+                    </div>
+                    <div class="link-list">
+                        <%set DataTable redGoods=get_article_list(channel, 0, 5, "status=0 and is_red=1 and goods_state=2")%>
+                        <%foreach(DataRow dr in redGoods.Rows)%>
+                        <a href="<%linkurl("auction_goods_show",{dr[id]})%>" class="btn-link">
+                        <div class="img-box">
+                            <img src="{dr[img_url]}" alt="">
+                        </div>
+                        <div class="word-list">
+                            <p class="p1">
+                                {dr[title]}
+                            </p>
+                            <p class="p2">
+                                    <span>
+                                        当前价格：
+                                    </span>
+                                <span class="b-red">
+                                        {dr[sell_price]}元
+                                    </span>
+                            </p>
+                        </div>
+                        </a>
+                        <%/foreach%>
+                    </div>
+                </div>
+            </div>
+            <div class="market-panel">
+                <div class="top">
+                    <div class="title">
+                        &nbsp;<!-- 您在搜索”佛像“找到1个条目 -->
+                    </div>
+                    <div class="cons">
+                        筛选条件：
+                        <div class="word-list">
+                            <!--<span class="span">-->
+                            <!--转经筒-->
+                            <!--<i class="fa fa-remove"></i>-->
+                            <!--</span>-->
+                            <!--<span class="span">-->
+                            <!--摆件-->
+                            <!--<i class="fa fa-remove"></i>-->
+                            <!--</span>-->
+                        </div>
+                        <a href="/auction_gsearch.aspx" class="clearCons" id="clear">
+                            清空所有筛选
+                        </a>
+                    </div>
+                    <div class="search-box">
+                        <input class="input" type="text" placeholder="搜索拍品" id="keywords" name="keywords" onkeydown="if(event.keyCode==13){SiteSearch('<%linkurl("search")%>', '#keywords');return false};" x-webkit-speech="" >
+                        <a href="javascript:;" id="searchbtn">
+                            <i class="iconfont icon-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="list-row clearfix">
+
+                        <%set DataTable goodsList=get_article_list(channel, category_id, pagesize, page, "status=0 and goods_state=2", out totalcount, out pagelist, "auction_goods_list", category_id, "__id__")%>
+                        <%foreach(DataRow dr in goodsList.Rows)%>
+                        <div class="commodity-box">
+                            <div class="img-box">
+                                <a href="<%linkurl("auction_goods_show",{dr[id]})%>" >
+                                <img src="{dr[img_url]}" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="<%linkurl("auction_goods_show",{dr[id]})%>" > {dr[title]}  </a>
+                            </h2>
+                            <div class="words">
+                                <p class="p">
+                                    <span class="sp_1">
+                                        拍卖预计结束时间
+                                    </span>
+                                    <span class="times" data_end_time="{dr[endtime]}">
+                                        <span class="days"></span>
+                                        天
+										<span class="hours"></span>
+                                        时
+                                        <span class="minutes"></span>
+                                        分
+                                        <span class="seconds"></span>
+                                        秒
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        出价人数
+                                    </span>
+                                    <span class="sp_2">
+									<%csharp%>
+									int goodsid = (int)dr["id"];
+									int num = new RWcms.BLL.auction_order().GetList(1000000, "article_id=" + goodsid + "", "id").Tables[0].Rows.Count;
+
+									<%/csharp%>
+                                        {num}人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        围观人数
+                                    </span>
+                                    <span class="sp_2">
+                                        {dr[click]}人
+                                    </span>
+                                </p>
+                                <p class="p">
+                                    <span class="sp_1">
+                                        市场估价
+                                    </span>
+                                    <span class="sp_2">
+                                        {dr[evaluate]}
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="price">
+                                <i>￥</i>
+                                <span class="fa-30px">
+                                    {dr[sell_price]}元
+                                </span>
+                                <a href="<%linkurl("auction_goods_show",{dr[id]})%>" class="btn-link">
+                                参与竞拍
+                                </a>
+                            </div>
+                        </div>
+                        <%/foreach%>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <span>共5记录</span><span class="disabled">«上一页</span><span class="current">1</span><a href="/auction_goods_list.aspx?category_id=0&page=2">2</a><a href="/auction_goods_list.aspx?category_id=0&page=3">3</a><a href="/auction_goods_list.aspx?category_id=0&page=2">下一页»</a> -->
+
+            <%if(!string.IsNullOrWhiteSpace(pagelist))%>
+            <div class="nav-page-list">
+                <label class="label"> 跳转： </label>
+                <input type="text" class="page-jump" onkeydown="if(event.keyCode==13){location.href='/auction_goods_list.aspx?category_id={category_id}&page='+this.value;}">
+                {pagelist}
+                <!-- <a href="" class="btn-link str"> 首页 </a>
+                <a href="" class="btn-link prev"> 上一页 </a>
+                <a href="" class="btn-link"> 1 </a>
+                <a href="" class="btn-link"> 2 </a>
+                <a href="" class="btn-link"> 3 </a>
+                <span> ...... </span>
+                <a href="" class="btn-link"> 12 </a>
+                <a href="" class="btn-link next"> 下一页 </a>
+                <a href="" class="btn-link end"> 尾页 </a> -->
+            </div>
+            <%/if%>
+
+            <div class="rec-historys">
+                <div class="big-title">
+                    最近浏览
+                </div>
+                <div class="list-row clearfix">
+                    <%set DataTable visitedGoodsList=get_article_list(channel, 0, 4, page, "status=0 and goods_state=2", out totalcount, out pagelist, "auction_goods_list", category_id, "__id__")%>
+                    <%foreach(DataRow dr in visitedGoodsList.Rows)%>
+                    <div class="commodity-box">
+                        <div class="img-box">
+                            <img src="{dr[img_url]}" alt="">
+                        </div>
+                        <h2 class="title">
+                            {dr[title]}
+                        </h2>
+                        <div class="words">
+                            <p class="p">
+                                <span class="sp_1">
+                                    拍卖预计结束时间
+                                </span>
+                                <span class="times" data_end_time="{dr[endtime]}">
+                                    <span class="days"></span>
+									天
+									<span class="hours"></span>
+                                    时
+                                    <span class="minutes"></span>
+                                    分
+                                    <span class="seconds"></span>
+                                    秒
+                                </span>
+                            </p>
+                            <p class="p">
+                                <span class="sp_1">
+                                    出价人数
+                                </span>
+                                <span class="sp_2">
+                                    <%csharp%>
+									int goodsid = (int)dr["id"];
+									int num = new RWcms.BLL.auction_order().GetList(1000000, "article_id=" + goodsid + "", "id").Tables[0].Rows.Count;
+
+									<%/csharp%>
+                                        {num}人
+                                </span>
+                            </p>
+                            <p class="p">
+                                <span class="sp_1">
+                                    围观人数
+                                </span>
+                                <span class="sp_2">
+                                    {dr[click]}人
+                                </span>
+                            </p>
+                            <p class="p">
+                                <span class="sp_1">
+                                    市场估价
+                                </span>
+                                <span class="sp_2">
+                                    {dr[evaluate]}元
+                                </span>
+                            </p>
+                        </div>
+                        <div class="price">
+                            <i>￥</i>
+                            <span class="fa-30px">
+                                {dr[sell_price]}元
+                            </span>
+                            <a href="" class="btn-link">
+                                参与竞拍
+                            </a>
+                        </div>
+                    </div>
+                    <%/foreach%>
+                </div>
+            </div>
+        </div>
+        <div class="pay-process clearfix">
+            <div class="container">
+                <a href="" class="box mar-lef-0">
+                    <div class="img-box">
+                        <img src="<%templateskin%>/images/icon-listA1%20(1).png" alt="">
+                    </div>
+                    <p class="p">
+                        拍卖保障
+                    </p>
+                </a>
+                <a href="" class="box">
+                    <div class="img-box">
+                        <img src="<%templateskin%>/images/icon-listA1%20(2).png" alt="">
+                    </div>
+                    <p class="p">
+                        支付帮助
+                    </p>
+                </a>
+                <a href="" class="box">
+                    <div class="img-box">
+                        <img src="<%templateskin%>/images/icon-listA1%20(3).png" alt="">
+                    </div>
+                    <p class="p">
+                        机构支持
+                    </p>
+                </a>
+                <a href="" class="box">
+                    <div class="img-box">
+                        <img src="<%templateskin%>/images/icon-listA1%20(4).png" alt="">
+                    </div>
+                    <p class="p">
+                        新手帮助
+                    </p>
+                </a>
+                <a href="" class="box mar-rig-0">
+                    <div class="img-box">
+                        <img src="<%templateskin%>/images/icon-listA1%20(5).png" alt="">
+                    </div>
+                    <p class="p">
+                        竞拍流程
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page_con_3">
+        <div class="container content">
+
+        </div>
+    </div>
+    <div class="page_con_4">
+        <div class="container content">
+
+        </div>
+    </div>
+</section>
+
+
+<!--页面底部-->
+<%template src="_footer.html"%>
+<!--/页面底部-->
+</body>
+</html>
